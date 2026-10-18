@@ -1,0 +1,12 @@
+scored vault clips (D,E,Total present): 1294
+removed overlapping duplicates:          47
+final clips:                             1247
+distinct vaults (routine groups):        1173
+source videos:                           125
+split (clips / videos): train 886/88, val 155/19, test 206/18
+clips without element segment:           87
+       D: min 0.00  median 5.40  max 7.10
+       E: min 0.00  median 8.90  max 9.90
+      ND: min 0.00  median 0.00  max 2.00
+   Total: min 0.00  median 14.33  max 16.30
+duration: min 4.96  median 7.36  max 58.04
