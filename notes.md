@@ -47,13 +47,21 @@
 - Observation: The video segment and annotation appear consistent; no obvious issue was found.
 
 
-Day 2: Test Clip Download and Availability
+Day 2: Clip Download and Availability
 
 - Checked all 18 source videos in the test split.
-- 16 of 18 source videos were available on YouTube.
-- 2 source videos were unavailable: GCyW1jPfWdg and iSQqsVFkQAA.
+- 16 of 18 test source videos were available on YouTube.
+- 2 test source videos were unavailable: GCyW1jPfWdg and iSQqsVFkQAA.
 - 206 test clips were present in the manifest.
 - 177 test clips were successfully downloaded and usable (86%).
-- 6 additional clip-level downloads failed due to FFmpeg errors.
+- 6 test clip-level downloads failed due to FFmpeg errors.
+- Downloaded a reproducible sample of 300 train clips, sampled evenly across the available train videos.
+- 260 of 300 train clips were successfully downloaded and usable (87%).
+- 9 source videos were unavailable across the checked train/test sources.
+- 20 clip-level downloads failed due to FFmpeg errors.
+- No videos hung or errored during the source-video availability check.
 - No problematic/corrupted files were detected by the clip checker.
 - Spot-checked downloaded clips from different source videos; the clips contained the expected vault actions and showed no obvious black, frozen, or corrupted footage.
+- Generated `out/clips_available.csv` containing the usable train and test clips.
+- Generated `out/download_report.txt` containing the final download and availability results.
+- Copied the usable clips and latest `clips_available.csv` to Google Drive for the next-stage Colab work.

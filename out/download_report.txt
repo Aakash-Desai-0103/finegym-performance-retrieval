@@ -1,15 +1,17 @@
 DOWNLOAD REPORT
 
+train: attempted  300  usable  260  (87%)  of 886 in manifest
  test: attempted  206  usable  177  (86%)  of 206 in manifest
 
-usable clips total: 178
-usable source videos: 17
-distinct vaults (routine groups): 169
+usable clips total: 438
+usable source videos: 98
+distinct vaults (routine groups): 428
+train E: min 7.53 median 8.90 max 9.80 | distinct vault codes 25
 test E: min 7.57 median 9.03 max 9.70 | distinct vault codes 17
 
-source videos checked: 18
-unavailable YouTube videos (2): GCyW1jPfWdg, iSQqsVFkQAA
+source videos checked: 106
+unavailable YouTube videos (9): 1_Jqkqc9TgE, GCyW1jPfWdg, POZkrxioEus, Ry5PFp-pRmA, SmM5COoXqDA, UyGu-WTodV0, iSQqsVFkQAA, jR0OFsCYcD4, q3kjkmjtTBk
 videos that hung or errored on check (0): none
-clip-level failures/timeouts on available videos: 6
-     6 x ERROR: ffmpeg exited with code 3436169992
+clip-level failures/timeouts on available videos: 20
+    20 x ERROR: ffmpeg exited with code 3436169992
 problem files (excluded): 0
