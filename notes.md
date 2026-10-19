@@ -45,3 +45,15 @@
 - Annotation check: The annotated time range contains a vault performance.
 - Result sheet check: The D, E and Total scores match the corresponding Finals result entry.
 - Observation: The video segment and annotation appear consistent; no obvious issue was found.
+
+
+Day 2: Test Clip Download and Availability
+
+- Checked all 18 source videos in the test split.
+- 16 of 18 source videos were available on YouTube.
+- 2 source videos were unavailable: GCyW1jPfWdg and iSQqsVFkQAA.
+- 206 test clips were present in the manifest.
+- 177 test clips were successfully downloaded and usable (86%).
+- 6 additional clip-level downloads failed due to FFmpeg errors.
+- No problematic/corrupted files were detected by the clip checker.
+- Spot-checked downloaded clips from different source videos; the clips contained the expected vault actions and showed no obvious black, frozen, or corrupted footage.
