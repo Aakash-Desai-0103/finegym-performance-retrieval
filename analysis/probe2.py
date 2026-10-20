@@ -1,9 +1,21 @@
+"""Day 3 robustness: E prediction per stage (whole / approach / flight / landing / combos) with
+95% bootstrap CIs over test VIDEOS, plus a permutation test (shuffled training labels).
+
+Usage:
+    python analysis/probe2.py --feats videomae_k400_all.npz --index videomae_k400_index.csv
+"""
+import argparse
+ap = argparse.ArgumentParser()
+ap.add_argument("--feats", default="videomae_k400_all.npz")
+ap.add_argument("--index", default="videomae_k400_index.csv")
+ap.add_argument("--out", default=".")
+args = ap.parse_args()
 import numpy as np, pandas as pd, warnings
 from scipy.stats import spearmanr
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import RidgeCV
 warnings.filterwarnings('ignore')
-F=np.load('feats.npz',allow_pickle=True); m=pd.read_csv('index.csv',dtype={'vault_code':str})
+F=np.load(args.feats,allow_pickle=True); m=pd.read_csv(args.index,dtype={'vault_code':str})
 W=F['whole'].astype(np.float32); S=F['stages'].astype(np.float32); hs=F['has_stages']
 code=m.vault_code.fillna('NA').values; vid=m.video_id.values
 tr=(m.split=='train').values; te=(m.split=='test').values; y=m.E.values

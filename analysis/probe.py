@@ -1,10 +1,23 @@
+"""Day 3 checks on frozen VideoMAE features: vault identity, scene bias, stage separability,
+and a first ridge-regression score prediction (E / Total / D) with overall and within-vault SRCC.
+
+Usage (files from Drive: capstone/features/):
+    python analysis/probe.py --feats videomae_k400_all.npz --index videomae_k400_index.csv
+Writes probe_results.csv next to --out (default: current folder).
+"""
+import argparse
+ap = argparse.ArgumentParser()
+ap.add_argument("--feats", default="videomae_k400_all.npz")
+ap.add_argument("--index", default="videomae_k400_index.csv")
+ap.add_argument("--out", default=".")
+args = ap.parse_args()
 import numpy as np, pandas as pd, warnings
 from scipy.stats import spearmanr
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import RidgeCV, LogisticRegression
 from sklearn.decomposition import PCA
 warnings.filterwarnings('ignore')
-F=np.load('feats.npz',allow_pickle=True); m=pd.read_csv('index.csv',dtype={'vault_code':str})
+F=np.load(args.feats,allow_pickle=True); m=pd.read_csv(args.index,dtype={'vault_code':str})
 W=F['whole'].astype(np.float32); S=F['stages'].astype(np.float32); hs=F['has_stages']
 tr=(m.split=='train').values; te=(m.split=='test').values
 def norm(x): return x/np.linalg.norm(x,axis=-1,keepdims=True)
@@ -66,4 +79,4 @@ for target in ['E','Total','D']:
 R=pd.DataFrame(rows,columns=['target','features','SRCC','within-vault SRCC','MSE','R-l2 (x100)','ridge alpha'])
 pd.set_option('display.width',200); print(R.round(3).to_string(index=False))
 print('within-vault: test vault codes with >=5 clips:', within_srcc(np.random.rand(te.sum()),m.E.values[te],code[te])[1:])
-R.to_csv('probe_results.csv',index=False)
+import os; R.to_csv(os.path.join(args.out,'probe_results.csv'),index=False)

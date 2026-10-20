@@ -67,19 +67,19 @@ Day 2: Clip Download and Availability
 - Copied the usable clips and latest `clips_available.csv` to Google Drive for the next-stage Colab work.
 
 
-## Day 3: VideoMAE Feature Extraction and Initial Analysis
+## Day 3: VideoMAE Feature Extraction and Analysis
 
-- Extracted frozen VideoMAE-Base (Kinetics-400) features on Google Colab using a T4 GPU.
-- Processed 437 usable clips: 260 train and 177 test.
-- 408 of 437 clips had stage features available.
+- Extracted frozen VideoMAE-Base (Kinetics-400) features for 961 usable clips: 784 train and 177 test.
+- 886 of 961 clips contained valid stage features.
 - Feature extraction completed successfully with 0 errors.
-- Generated whole-clip features `(437, 768)`, temporal sequence features `(437, 8, 768)`, and stage features `(437, 3, 768)`.
-- Initial analysis showed that whole-clip features were strongly influenced by the source broadcast/scene rather than fine-grained vault identity.
-- Nearest-neighbour vault-code accuracy was below the majority-class baseline.
-- Stage features were clearly distinguishable: approach vs flight vs landing classification achieved 97.8% test accuracy.
-- Landing-stage features gave the strongest execution-score prediction, with E SRCC = 0.580 overall and 0.448 within the same vault.
-- The within-vault result was supported by a permutation test (p = 0.005).
-- Total score was strongly associated with difficulty (D), confirming that E is the more meaningful target for performance comparison.
-- Feature extraction outputs were saved to Google Drive under `capstone/features/`.
-- Intermediate feature files were retained to allow extraction to resume if needed.
-- Day 3 extraction completed in approximately 9.2 minutes with no errors.
+- Whole-clip features showed weak vault-identity performance: 1-NN accuracy was 0.192 compared with a 0.260 majority-class baseline.
+- Strong source-video bias was observed: 1-NN retrieval within the training set selected the same source video 76.0% of the time, compared with 1.5% chance.
+- Stage representations were highly separable: approach/flight/landing classification accuracy was 98.6% on the test clips.
+- For execution-score prediction (E), whole-clip features achieved SRCC 0.302 overall and 0.226 within-vault.
+- The landing stage achieved the strongest individual-stage result: SRCC 0.577 overall and 0.476 within-vault, with a 95% bootstrap CI of [0.29, 0.58] for within-vault SRCC.
+- Stages-only features achieved SRCC 0.566 overall and 0.489 within-vault.
+- Whole + stage features achieved SRCC 0.505 overall and 0.450 within-vault.
+- The permutation test for whole + stages gave observed within-vault SRCC 0.450, compared with a null 95th percentile of 0.226 and p=0.000.
+- The results indicate that stage-specific representations, particularly the landing stage, contain useful execution-related information beyond the whole-clip representation.
+- Difficulty (D) alone remained a strong predictor of Total score, with SRCC 0.895.
+- Feature files and intermediate extraction parts are stored on Google Drive under `capstone/features/`; they are not stored in Git.
