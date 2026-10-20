@@ -65,3 +65,21 @@ Day 2: Clip Download and Availability
 - Generated `out/clips_available.csv` containing the usable train and test clips.
 - Generated `out/download_report.txt` containing the final download and availability results.
 - Copied the usable clips and latest `clips_available.csv` to Google Drive for the next-stage Colab work.
+
+
+## Day 3: VideoMAE Feature Extraction and Initial Analysis
+
+- Extracted frozen VideoMAE-Base (Kinetics-400) features on Google Colab using a T4 GPU.
+- Processed 437 usable clips: 260 train and 177 test.
+- 408 of 437 clips had stage features available.
+- Feature extraction completed successfully with 0 errors.
+- Generated whole-clip features `(437, 768)`, temporal sequence features `(437, 8, 768)`, and stage features `(437, 3, 768)`.
+- Initial analysis showed that whole-clip features were strongly influenced by the source broadcast/scene rather than fine-grained vault identity.
+- Nearest-neighbour vault-code accuracy was below the majority-class baseline.
+- Stage features were clearly distinguishable: approach vs flight vs landing classification achieved 97.8% test accuracy.
+- Landing-stage features gave the strongest execution-score prediction, with E SRCC = 0.580 overall and 0.448 within the same vault.
+- The within-vault result was supported by a permutation test (p = 0.005).
+- Total score was strongly associated with difficulty (D), confirming that E is the more meaningful target for performance comparison.
+- Feature extraction outputs were saved to Google Drive under `capstone/features/`.
+- Intermediate feature files were retained to allow extraction to resume if needed.
+- Day 3 extraction completed in approximately 9.2 minutes with no errors.
