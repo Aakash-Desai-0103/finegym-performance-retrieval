@@ -1,0 +1,9 @@
+features,model,SRCC,within_vault,within_vault_video,n_vault_groups,n_vault_clips,n_vv_groups,n_vv_clips,wv_lo,wv_hi,wvv_lo,wvv_hi
+landing,ridge,0.577,0.476,0.277,9,154,23,110,0.319,0.584,0.164,0.471
+landing,mlp,0.554,0.476,0.25,9,154,23,110,0.299,0.562,0.089,0.388
+landing,pairwise,0.274,0.271,0.163,9,154,23,110,0.124,0.414,0.022,0.355
+landing,ridge video-avg,0.489,0.235,,8,147,0,0,-0.013,0.431,,
+stages (3),ridge,0.566,0.489,0.393,9,154,23,110,0.302,0.62,0.216,0.556
+stages (3),mlp,0.577,0.451,0.432,9,154,23,110,0.276,0.571,0.244,0.589
+stages (3),pairwise,0.336,0.398,0.363,9,154,23,110,0.216,0.532,0.186,0.525
+stages (3),ridge video-avg,0.529,0.33,,8,147,0,0,0.058,0.494,,
