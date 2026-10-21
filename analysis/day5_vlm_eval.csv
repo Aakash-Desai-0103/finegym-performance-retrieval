@@ -1,0 +1,4 @@
+model,n_clips,overall,within_vault,within_vault_video,MAE,bias,pred_std,distinct,overall_lo,within_vault_lo,within_vault_video_lo,overall_hi,within_vault_hi,within_vault_video_hi
+VLM zero-shot,33,,,,0.711,-0.711,0.0,1,,,,,,
+ridge 3 stages (ours),33,0.358,0.32,0.631,0.182,-0.049,0.221,28,0.092,-0.027,0.143,0.577,0.604,1.0
+"ridge 3 stages (ours), all scored clips",36,0.408,0.31,0.505,0.192,-0.069,0.237,30,0.126,-0.077,0.0,0.621,0.583,0.943

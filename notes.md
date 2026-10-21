@@ -1,6 +1,6 @@
 # Working notes: FineGym performance-aware retrieval
 
-Week of 18–22 Oct 2026. Goal from mentor: work with FineGym, then test performance-aware (AQA) models on FineGym clips and report results.
+Week of 18–21 Oct 2026 (Sun–Wed). Goal from mentor: work with FineGym, then test performance-aware (AQA) models on FineGym clips and report results.
 
 Scope this week: **vault only** (short, single-element clips). Main target: **E (execution)**.
 
@@ -100,9 +100,9 @@ Notebook: `notebooks/day3_feature_extraction.ipynb` (Colab T4, ≈12 min for the
 
 ---
 
-## Day 4 (Wed): stronger models, FineGrade comparison, and the competition shortcut
+## Day 4 (Tue night): stronger models, FineGrade comparison, and the competition shortcut
 
-Scripts: `analysis/day4_models.py`, `analysis/day4_within_video.py`. Results in `analysis/day4_results.csv`, `analysis/day4_within_video_*.csv`.
+Scripts: `analysis/day4_models.py`, `analysis/day4_same_video.py`. Results in `analysis/day4_results.csv`, `analysis/day4_within_video_all.csv`.
 
 ### 1. Model comparison (E)
 
@@ -153,9 +153,9 @@ Test: Spearman inside each (vault code, source video) group, which holds the com
 
 Findings:
 
-1. **There is a competition-level shortcut.** Knowing only the competition gives a within-vault SRCC of ≈0.24–0.33.
+1. **There is a competition-level shortcut.** Knowing only the competition gives a within-vault SRCC of 0.24–0.33.
 2. **The landing-only result relied heavily on it**: 0.476 → 0.277 once the competition is fixed. The Day 3 claim "the landing carries the most execution signal" is withdrawn.
-3. **All three stages together hold up**: ≈0.36–0.43 within the same vault and the same competition (the neural network barely drops; pairwise drops least relative to its starting point). This is real execution signal.
+3. **All three stages together hold up**: 0.36–0.43 within the same vault and the same competition (the neural network barely drops; pairwise drops least relative to its starting point). Competition level alone reaches 0.33 within vault, while the full model reaches 0.49 and still 0.39–0.43 with the competition fixed, so the stage features carry execution information beyond the competition level.
 4. Reliability: the stricter metric uses small groups, so CIs are wide; treat it as directional evidence.
 5. Implication for retrieval: a ranking model trained on absolute scores can learn to "prefer clips from elite meets". Performance-aware retrieval must control for competition level (e.g., compare within competition, or use relative/pairwise objectives).
 
@@ -163,3 +163,63 @@ Findings:
 
 > Stage-wise features (approach, flight, landing) from a frozen video model rank execution among athletes performing the same vault at the same competition with a Spearman correlation of ≈0.4. Part of the earlier same-vault result reflected competition-level differences, which are now controlled for.
 
+---
+
+## Day 5 (Wed): zero-shot VLM baseline
+
+Notebook: `notebooks/day5_vlm_zero_shot.ipynb` (Colab T4). Evaluation: `analysis/day5_eval_vlm.py` → `analysis/day5_vlm_eval.csv`. Pairwise test: own script.
+
+Question: can a general vision-language model, never trained on gymnastics, judge execution?
+
+Setup: `Qwen/Qwen2.5-VL-3B-Instruct`, float16, greedy decoding. 36 test clips (12 each from vault codes 5.80, 5.40, 4.60; 6–12 competitions per code). Input: 8 frames in time order (3 approach, 2 flight, 3 landing) plus the difficulty value. Prompt: act as an FIG judge, one phrase per stage, then an E score.
+
+### 1. Absolute scoring
+
+| | VLM zero-shot | Ridge, 3 stages (ours), same 33 clips |
+|---|---|---|
+| Usable answers | 33 of 36 (92%); 3 were "!!!!" (known float16 glitch of this model on T4) | n/a |
+| Distinct predictions | **1** (every clip: E = 8.2) | 28 |
+| Prediction spread (std) | 0.000 | 0.221 (true E std 0.214) |
+| Spearman overall | undefined (constant output) | 0.358 [0.09, 0.58] |
+| Spearman within vault | undefined | 0.320 [−0.03, 0.60] |
+| Mean absolute error | 0.711 | 0.182 |
+| Bias | −0.711 (too harsh) | −0.049 |
+
+- Stage phrases are boilerplate ("smooth and confident / controlled and fluid / stable and balanced") on every clip; no step, hop or form fault is ever mentioned, including on lower-E clips.
+- Within vault + video values on this subset are not reliable (most groups have only 2–3 clips) and are not used.
+
+### 2. Pairwise comparison ("same vault, which athlete executed better?")
+
+- 24 same-vault pairs, 18 valid answers, 0 errors.
+- The model chose **B (the second video) in 18 of 18** pairs: pure **position bias**. The reported accuracy 0.333 is just the share of pairs where B happened to be better; it is not a measure of judging.
+- The "reason" is identical for every pair and is assembled from words in the prompt ("more stable landing with fewer steps and a better chest position"): it repeats the judging criteria, not what is in the video.
+- Not done (optional): presenting each pair in both orders to measure order consistency.
+
+### Findings
+
+1. A small zero-shot VLM does not discriminate execution: one constant score, and a constant pairwise answer.
+2. Its explanations sound plausible but are **not grounded** in the video. For explainable comparison, explanations must come from measured evidence (stages, pose, detected faults), which supports the neurosymbolic direction.
+3. Our frozen stage-feature model, on the same clips, ranks execution clearly better (overall 0.36–0.41) with a 4× smaller error.
+4. Caveat: one 3B model, 8 frames, zero-shot. Larger models, more frames or fine-tuning may do better; the claim is "a small zero-shot VLM fails", not "VLMs cannot do this".
+
+---
+
+## Week summary
+
+| Question | Answer |
+|---|---|
+| Are there reliable performance labels for FineGym? | Yes: FineGym-AQA official scores; 4/4 manual checks matched result sheets |
+| Usable data | 961 vault clips (784 train / 177 test), split by competition; ≈12% lost to unavailable YouTube videos |
+| What is the right target? | E (execution), compared within the same vault; Total and D mostly encode which vault |
+| Do generic video features capture the vault? | No: they capture the broadcast (76% same-video nearest neighbours; vault identity below chance baseline) |
+| Do stage-wise features capture execution? | Yes, modestly: Spearman ≈0.4 within the same vault and competition (≈0.49 within vault before controlling for competition) |
+| Does a bigger model help? | No: ridge ≈ neural network; the features are the limit |
+| How does it compare with FineGrade? | Vault Total 0.67–0.69 (frozen features, unseen competitions) vs FineGrade 0.746 (end-to-end, split not stated); FineGrade does not report same-vault execution |
+| Can a zero-shot VLM do it? | No: constant score (8.2), always picks the second video, ungrounded explanations |
+| Main pitfall found | Competition-level shortcut: models can rank by "elite meet" instead of execution; retrieval must control for it |
+
+### Next steps
+
+- Write the one-page summary for the mentor (in progress).
+- Next phase: athlete-centred cropping or pose features to reduce scene bias; explainable stage-wise comparison grounded in measured evidence (towards neurosymbolic, rule-based fault detection); retrieval that controls for competition level; other apparatus.
+- Repo housekeeping: README and `requirements.txt` (numpy, pandas, scipy, scikit-learn, yt-dlp).
