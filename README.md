@@ -1,46 +1,48 @@
-# FineGym Performance Retrieval
+# Action Performance-Aware Fine-Grained Composite Video Retrieval
 
-This project explores the use of deep spatio-temporal features to analyze and retrieve gymnastics vault performances. The primary goal is to understand how different phases of a vault—the approach, the flight, and the landing—contribute to the final scoring, specifically focusing on the Execution (E) score.
+This project focuses on the analysis and retrieval of gymnastics vault performances using deep spatio-temporal features. The primary objective is to develop a system that can distinguish between athletes performing the same vault by analyzing execution quality (E-score) across specific phases: the approach, the flight, and the landing.
 
 ## 🎯 Objective
 
-We aim to determine if fine-grained, stage-specific representations can better predict athletic performance and execution quality than global, whole-clip features, which are often biased by the background or the identity of the source video.
+We aim to determine if fine-grained, stage-specific representations can better predict athletic performance and execution quality than global, whole-clip features. Our research specifically targets the "competition-level shortcut," where models might mistakenly correlate broadcast quality or event prestige with athlete execution.
 
 ## 🛠️ Methodology
 
-The pipeline is divided into three main stages:
+The project follows a rigorous pipeline from raw data acquisition to advanced model probing:
 
 ### 1. Data Acquisition & Curation
-Using the FineGym dataset as a foundation, we implemented a custom pipeline to:
-- Match annotated vault performances to their corresponding YouTube source videos.
-- Download and trim clips using `FFmpeg` to isolate specific performances.
-- Perform manual spot-checks on annotations to ensure the timing and scores (D and E) align with official result sheets.
+Using **FineGym-AQA**, we integrated official result-book scores (Difficulty, Execution, and Total) into the dataset.
+- **Manifest Building**: Curated 1,247 scored vault clips, split by source video to prevent data leakage.
+- **Pipeline**: Implemented a robust download and trim system using `yt-dlp` and `FFmpeg`, successfully processing 961 usable clips (784 train / 177 test).
+- **Validation**: Performed manual spot-checks against official FIG result PDFs to ensure annotation consistency.
 
-### 2. Feature Extraction
-We utilize a frozen **VideoMAE-Base** model (pretrained on Kinetics-400) to extract high-dimensional temporal features. 
-- **Global Features**: Extracted from the entire clip.
-- **Stage-Specific Features**: Extracted separately for the approach, flight, and landing phases.
+### 2. Feature Extraction & Modeling
+We utilize a frozen **VideoMAE-Base** (Kinetics-400) to extract temporal features:
+- **Global vs. Stage**: We compare whole-clip embeddings against separate embeddings for the approach, flight, and landing stages.
+- **Regression Models**: Employed Ridge Regression and Neural Networks to predict execution scores.
+- **Evaluation**: Used Spearman's Rank Correlation Coefficient (SRCC) and permutation tests to validate results.
 
-### 3. Performance Analysis
-To evaluate the utility of these features, we employ:
-- **1-NN Retrieval**: To check if features can correctly identify the vault type.
-- **SRCC (Spearman's Rank Correlation Coefficient)**: To measure the correlation between extracted features and the official Execution (E) scores.
-- **Permutation Testing**: To ensure that the observed correlations are statistically significant and not due to random chance.
+### 3. VLM Zero-Shot Baseline
+To test the capabilities of general-purpose AI, we evaluated **Qwen2.5-VL-3B-Instruct** in a zero-shot setting. We prompted the model to act as an FIG judge and provide both a score and a qualitative explanation for the performance.
 
 ## 📈 Key Findings
 
-Our initial analysis has yielded several interesting insights:
-- **The "Landing" is Key**: The landing stage is the strongest individual predictor of execution quality, showing a significantly higher correlation with E-scores than the approach or flight stages.
-- **Global Bias**: Whole-clip features suffer from strong source-video bias (selecting the same video ~76% of the time), making them less reliable for performance retrieval than stage-specific features.
-- **High Separability**: We achieved **98.6% accuracy** in classifying the different stages of a vault, confirming that VideoMAE captures distinct temporal signatures for each phase of the movement.
+### Performance-Aware Retrieval
+- **Stage-Wise Superiority**: Stage-specific features significantly outperform whole-clip features for execution prediction.
+- **The Competition Shortcut**: We discovered that models often learn the absolute E-level of a competition (e.g., elite meets score higher). When controlling for the competition, stage-wise features still maintain a Spearman correlation of **≈0.4** within the same vault.
+- **Feature Bottleneck**: Increasing model complexity (e.g., switching from Ridge to Neural Networks) did not significantly improve results, indicating that the quality of frozen features is the primary limiting factor.
+
+### VLM Evaluation
+- **Failure of Zero-Shot Judging**: The small VLM failed to discriminate execution, providing a constant score (8.2) for all clips and exhibiting strong position bias in pairwise comparisons.
+- **Ungrounded Explanations**: VLM-generated justifications were "hallucinated" boilerplate text and not grounded in actual video evidence.
 
 ## 📂 Project Structure
 
 ```text
-├── analysis/          # Probing scripts for feature analysis and SRCC calculation
-├── notebooks/         # Jupyter notebooks for feature extraction (Day 3)
-├── scripts/           # Data pipeline: downloading clips and building manifests
-├── out/               # Generated reports and availability CSVs
+├── analysis/          # Probing scripts, model comparisons, and VLM evaluations
+├── notebooks/         # Feature extraction and VLM zero-shot experiments
+├── scripts/           # Data pipeline: manifest building, clip downloading, and verification
+├── out/               # Generated manifests, availability reports, and results
 └── notes.md           # Detailed development log and experimental results
 ```
 
@@ -49,12 +51,12 @@ Our initial analysis has yielded several interesting insights:
 ### Prerequisites
 - Python 3.x
 - FFmpeg (required for clip extraction)
-- PyTorch & HuggingFace Transformers
+- `numpy`, `pandas`, `scipy`, `scikit-learn`, `yt-dlp`
 
 ### Running the Pipeline
-1. **Download Clips**: Use `scripts/download_clips.py` to fetch videos from YouTube based on the manifest.
-2. **Verify Clips**: Run `scripts/check_clips.py` to ensure all downloaded files are usable.
-3. **Extract Features**: Follow the logic in `notebooks/day3_feature_extraction.ipynb` to generate VideoMAE embeddings.
+1. **Download Clips**: Use `scripts/download_clips.py` to fetch videos from YouTube.
+2. **Verify Clips**: Run `scripts/check_clips.py` to ensure data integrity.
+3. **Extract Features**: Follow `notebooks/day3_feature_extraction.ipynb` to generate VideoMAE embeddings.
 4. **Analyze**: Use the scripts in `analysis/` to correlate features with performance scores.
 
 ---
