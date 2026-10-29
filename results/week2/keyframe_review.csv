@@ -1,0 +1,41 @@
+clip_id,sheet,flight_peak_ok,touchdown_ok,deepest_squat_ok,settled_ok,notes
+jABvTCCWinA__E_004062_004072,sheets/jABvTCCWinA__E_004062_004072.png,y,y,p,p,Cannot clearly differentiate between touchdown and deepest squat 
+nEoD3t5O3Hg__E_004105_004114,sheets/nEoD3t5O3Hg__E_004105_004114.png,y,n,n,p,Certain frames and poses the skeletal tracking is absent
+Z0bBRwAzKe0__E_001826_001833,sheets/Z0bBRwAzKe0__E_001826_001833.png,y,y,y,y,Everything is fine
+jz594oTnl-k__E_000757_000765,sheets/jz594oTnl-k__E_000757_000765.png,y,y,y,y,Everything is fine
+dqUNtY2GwW4__E_004835_004843,sheets/dqUNtY2GwW4__E_004835_004843.png,p,y,y,n,"Flight peak shows fallback and the settled has zoomed in on the judge, no athlete in-sight."
+2giTb7IpJDU__E_001845_001852,sheets/2giTb7IpJDU__E_001845_001852.png,y,n,y,y,Touchdown frame is very identical to flight peak
+n9-yxVGYMRw__E_000991_000999,sheets/n9-yxVGYMRw__E_000991_000999.png,n,y,y,y,flight peak shows the same as the table frame.
+yz-uNJgIhk4__E_002070_002077,sheets/yz-uNJgIhk4__E_002070_002077.png,y,y,y,y,"All good, in certain frames the skeletal tracking is absent."
+PgNRyuavbS4__E_005142_005151,sheets/PgNRyuavbS4__E_005142_005151.png,n,y,p,p,"Fligh peak frame is same as touchdown and deepest squat, settled is also not convincing"
+I1OMnMSk1Lg__E_002639_002646,sheets/I1OMnMSk1Lg__E_002639_002646.png,p,y,p,y,"Deepest squat is not convincing,toiuchdown itself is more convincing than deepest squat."
+8WGrvkd6ZEU__E_003831_003838,sheets/8WGrvkd6ZEU__E_003831_003838.png,y,n,n,y,"Definitely the worst till now, table focuses on judge."
+CUuRl0Bwbbc__E_000355_000364,sheets/CUuRl0Bwbbc__E_000355_000364.png,y,y,p,y,Flight peak shows fallback.
+LHZAh32EoC8__E_000783_000791,sheets/LHZAh32EoC8__E_000783_000791.png,n,y,n,y,"Table and flight peak are same,deepest squat and touchdown same, though there are just about to land on mat."
+qfgrzomg0nc__E_002071_002077,sheets/qfgrzomg0nc__E_002071_002077.png,y,y,p,y,The athlete is in air during deepest squat?
+MyrqGZXxpsY__E_005845_005852,sheets/MyrqGZXxpsY__E_005845_005852.png,y,n,n,y,touchdown and deepest squat same as flight peak
+TBsWos4T4OE__E_002014_002022,sheets/TBsWos4T4OE__E_002014_002022.png,y,n,n,y,"Touchdown and deepest squat, athlete is in air"
+Wu1gxxpbF2o__E_004498_004505,sheets/Wu1gxxpbF2o__E_004498_004505.png,n,n,y,y,Flight and touchdown fouses on the bakcground person.
+aEZbP-Yephw__E_000258_000266,sheets/aEZbP-Yephw__E_000258_000266.png,y,n,n,y,"Touchdown and deepest squat, athlete is in air"
+EFvDqOF1sCk__E_001711_001718,sheets/EFvDqOF1sCk__E_001711_001718.png,y,y,y,y,Everything is fine
+MVLZz2J6tcE__E_003490_003497,sheets/MVLZz2J6tcE__E_003490_003497.png,p,n,n,y,"Touchdown and deepest squat, athlete is in air and fallback in flight peak"
+wWZry3-5sF0__E_003832_003839,sheets/wWZry3-5sF0__E_003832_003839.png,y,n,p,y,Touchdown is close to peak height achieved
+KDjuRG3-Xf0__E_003232_003244,sheets/KDjuRG3-Xf0__E_003232_003244.png,n,n,n,n,The worst one so far.
+qzi2cKZCf94__E_004076_004083,sheets/qzi2cKZCf94__E_004076_004083.png,y,y,y,y,Everything is fine
+XZak6ktC90c__E_001828_001835,sheets/XZak6ktC90c__E_001828_001835.png,p,y,p,y,Fallback for flight peak
+GF8D7Dx2mhs__E_007014_007022,sheets/GF8D7Dx2mhs__E_007014_007022.png,y,n,n,y,"Touchdown and deepest squat, athlete is in air"
+yNlBac0ZMJg__E_000925_000934,sheets/yNlBac0ZMJg__E_000925_000934.png,y,y,y,y,"This was funny, athlete failed and fell down"
+JHqcbeKepSg__E_009436_009443,sheets/JHqcbeKepSg__E_009436_009443.png,y,y,n,y,"Deepest squat ,athlete is in air"
+f-1FbFegbuQ__E_001763_001771,sheets/f-1FbFegbuQ__E_001763_001771.png,y,y,y,y,Fallback for flight peak
+9Mtbac7g15I__E_000229_000237,sheets/9Mtbac7g15I__E_000229_000237.png,y,n,n,y,"Touchdown and deepest squat, athlete is in air"
+mQ59PLtU4QA__E_001269_001277,sheets/mQ59PLtU4QA__E_001269_001277.png,n,n,n,y,Failed porly in touchdown deepest
+fDa0HpoXES4__E_005048_005055,sheets/fDa0HpoXES4__E_005048_005055.png,y,y,y,y,Everything is fine
+X4ajWw8L19s__E_005841_005849,sheets/X4ajWw8L19s__E_005841_005849.png,n,n,y,p,The skeletal tracking is horizonal and looks at the table
+hibW8s4WQmQ__E_003654_003661,sheets/hibW8s4WQmQ__E_003654_003661.png,p,n,n,y,"Touchdown and deepest squat, athlete is in air and fallback in flight peak"
+X4CY5MZwI9I__E_003619_003628,sheets/X4CY5MZwI9I__E_003619_003628.png,y,y,y,y,"This was funny, athlete failed and fell down"
+aN9hSsP6xTg__E_002354_002361,sheets/aN9hSsP6xTg__E_002354_002361.png,y,n,n,y,"Touchdown and deepest squat, athlete is in air"
+e3EsDlpNo0c__E_002242_002258,sheets/e3EsDlpNo0c__E_002242_002258.png,n,n,n,n,Focuses on a background person
+IZy40LwRdbM__E_000663_000672,sheets/IZy40LwRdbM__E_000663_000672.png,n,y,y,y,
+OIJe8fQw7Wo__E_004773_004779,sheets/OIJe8fQw7Wo__E_004773_004779.png,y,y,y,y,All fine.
+GbUQwE9N3aM__E_006068_006075,sheets/GbUQwE9N3aM__E_006068_006075.png,n,n,p,y,Failed in early detection
+Uo7ubem-G9I__E_002268_002279,sheets/Uo7ubem-G9I__E_002268_002279.png,y,y,y,y,Fallback for flight peak

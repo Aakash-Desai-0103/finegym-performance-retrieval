@@ -1,0 +1,61 @@
+clip_id,video_id,vault_code,E,sheet,gymnast_right,approach_ok,flight_ok,landing_ok,notes
+1rkcLEAMTpw__E_000694_000700,1rkcLEAMTpw,6.2,9.3,yolo26l_960/sheets_v3/1rkcLEAMTpw__E_000694_000700.png,,p,p,p,Several NOT FOUND frames; detected skeletons generally on gymnast
+26Y8BsNiiL8__E_004202_004210,26Y8BsNiiL8,6.5,9.3,yolo26l_960/sheets_v3/26Y8BsNiiL8__E_004202_004210.png,,n,y,y, approach mostly NOT FOUND; flight and landing mostly correctly tracked
+2giTb7IpJDU__E_001845_001852,2giTb7IpJDU,6.3,9.9,yolo26l_960/sheets_v3/2giTb7IpJDU__E_001845_001852.png,,p,p,p,"Multiple NOT FOUND frames, especially flight/landing"
+5cuxEEKyth8__E_004748_004757,5cuxEEKyth8,4.6,8.95,yolo26l_960/sheets_v3/5cuxEEKyth8__E_004748_004757.png,,p,p,p,Several NOT FOUND frames; detected skeletons generally on gymnast
+8WGrvkd6ZEU__E_003831_003838,8WGrvkd6ZEU,5.2,8.825,yolo26l_960/sheets_v3/8WGrvkd6ZEU__E_003831_003838.png,,y,y,y,Skeleton generally tracks gymnast across stages
+9Mtbac7g15I__E_000229_000237,9Mtbac7g15I,5.5,9.4,yolo26l_960/sheets_v3/9Mtbac7g15I__E_000229_000237.png,,n,y,y,Approach has mostly missing detections; flight and landing track gymnast well
+A0xAXXysHUo__E_000696_000704,A0xAXXysHUo,6.3,9.4,yolo26l_960/sheets_v3/A0xAXXysHUo__E_000696_000704.png,,y,y,p,landing has 2 NOT FOUND frames; otherwise tracking is correct
+C5Yfd1IWjmM__E_003643_003650,C5Yfd1IWjmM,5.3,8.9,yolo26l_960/sheets_v3/C5Yfd1IWjmM__E_003643_003650.png,,y,p,p,one approach NOT FOUND; flight has NOT FOUND/unclear frames; landing has 2 weaker frames
+CUuRl0Bwbbc__E_000355_000364,CUuRl0Bwbbc,5.8,9.066,yolo26l_960/sheets_v3/CUuRl0Bwbbc__E_000355_000364.png,,p,n,p,approach 2 NOT FOUND; flight 3 NOT FOUND; landing 2 NOT FOUND
+DTedv-hhHU4__E_000738_000747,DTedv-hhHU4,5.2,8.775,yolo26l_960/sheets_v3/DTedv-hhHU4__E_000738_000747.png,,y,y,y,skeleton tracks gymnast across all stages
+EFvDqOF1sCk__E_001711_001718,EFvDqOF1sCk,5.4,8.9,yolo26l_960/sheets_v3/EFvDqOF1sCk__E_001711_001718.png,,y,p,p,flight 2 NOT FOUND; landing 2 NOT FOUND
+GF8D7Dx2mhs__E_007014_007022,GF8D7Dx2mhs,5.8,8.9,yolo26l_960/sheets_v3/GF8D7Dx2mhs__E_007014_007022.png,,y,p,p,Flight and landing partially visible with several NOT FOUND frames
+GbUQwE9N3aM__E_006068_006075,GbUQwE9N3aM,5.8,9.35,yolo26l_960/sheets_v3/GbUQwE9N3aM__E_006068_006075.png,,y,y,y,All three phases sufficiently visible
+I1OMnMSk1Lg__E_002639_002646,I1OMnMSk1Lg,4.4,8.9,yolo26l_960/sheets_v3/I1OMnMSk1Lg__E_002639_002646.png,,p,p,p,Multiple NOT FOUND frames across all three phases
+I749IS2IeFY__E_003532_003540,I749IS2IeFY,6.3,9.466,yolo26l_960/sheets_v3/I749IS2IeFY__E_003532_003540.png,,y,p,p,Approach fully visible; flight and landing have NOT FOUND frames
+ICL5k84viw0__E_003006_003014,ICL5k84viw0,4.6,8.8,yolo26l_960/sheets_v3/ICL5k84viw0__E_003006_003014.png,,p,p,p,Multiple NOT FOUND frames across all three phases
+IZy40LwRdbM__E_000663_000672,IZy40LwRdbM,4.6,7.95,yolo26l_960/sheets_v3/IZy40LwRdbM__E_000663_000672.png,,y,y,p,Approach and flight mostly clear; landing has multiple NOT FOUND frames
+JHqcbeKepSg__E_009436_009443,JHqcbeKepSg,4.6,8.8,yolo26l_960/sheets_v3/JHqcbeKepSg__E_009436_009443.png,,p,p,y,Approach and flight partially visible; landing has good usable tracking
+KDjuRG3-Xf0__E_003232_003244,KDjuRG3-Xf0,5.2,8.333,yolo26l_960/sheets_v3/KDjuRG3-Xf0__E_003232_003244.png,,y,p,y,Approach and landing clear; flight has multiple NOT FOUND frames
+LHZAh32EoC8__E_000783_000791,LHZAh32EoC8,5,8.6,yolo26l_960/sheets_v3/LHZAh32EoC8__E_000783_000791.png,,y,p,p,Flight/landing have some NOT FOUND frames.
+MVLZz2J6tcE__E_003490_003497,MVLZz2J6tcE,5,8.7,yolo26l_960/sheets_v3/MVLZz2J6tcE__E_003490_003497.png,,p,p,p,One or more NOT FOUND frames in each stage.
+MyrqGZXxpsY__E_005845_005852,MyrqGZXxpsY,5.8,9.2,yolo26l_960/sheets_v3/MyrqGZXxpsY__E_005845_005852.png,,y,p,p,Flight has two NOT FOUND frames; landing has partial detection.
+Ny0ZMOIyb9M__E_003483_003491,Ny0ZMOIyb9M,4.2,8.433,yolo26l_960/sheets_v3/Ny0ZMOIyb9M__E_003483_003491.png,,p,y,p,Approach has 1 NOT FOUND frame; landing has 1 NOT FOUND frame and one weak/partial pose detection.
+OIJe8fQw7Wo__E_004773_004779,OIJe8fQw7Wo,5.4,8.8,yolo26l_960/sheets_v3/OIJe8fQw7Wo__E_004773_004779.png,,p,p,y,Approach has 1 NOT FOUND frame; flight has 2 NOT FOUND frames; landing is consistently detected.
+PgNRyuavbS4__E_005142_005151,PgNRyuavbS4,4.9,8.9,yolo26l_960/sheets_v3/PgNRyuavbS4__E_005142_005151.png,,p,p,p,Approach has 1 NOT FOUND frame; flight has 2 NOT FOUND frames; landing has 1 NOT FOUND frame.
+TBsWos4T4OE__E_002014_002022,TBsWos4T4OE,5.8,8.966,yolo26l_960/sheets_v3/TBsWos4T4OE__E_002014_002022.png,,y,y,y,"Pose tracking is consistently visible and usable across approach, flight, and landing."
+Uo7ubem-G9I__E_002268_002279,Uo7ubem-G9I,4.4,8.7,yolo26l_960/sheets_v3/Uo7ubem-G9I__E_002268_002279.png,,y,p,p,Approach is consistently tracked. Flight has usable tracking initially but two NOT FOUND frames. Landing contains two NOT FOUND frames followed by several usable tracked frames.
+Vq-w0Jk7y7g__E_010070_010076,Vq-w0Jk7y7g,4,8.833,yolo26l_960/sheets_v3/Vq-w0Jk7y7g__E_010070_010076.png,,y,p,y,"Approach is fully trackable. Flight has 2 NOT FOUND frames, so partial. Landing frames are trackable, including the inverted phase and recovery."
+WCcSXjsCVMA__E_001973_001979,WCcSXjsCVMA,5,8.9,yolo26l_960/sheets_v3/WCcSXjsCVMA__E_001973_001979.png,,p,p,y,"Approach has several NOT FOUND frames, with only some usable tracking. Flight is mostly trackable but includes a NOT FOUND frame. Landing is consistently trackable."
+WGsCzfWF-4w__E_003028_003035,WGsCzfWF-4w,5.8,8.933,yolo26l_960/sheets_v3/WGsCzfWF-4w__E_003028_003035.png,,p,p,p,"Approach has 2 NOT FOUND frames. Flight contains 1 NOT FOUND frame. Landing also contains 1 NOT FOUND frame, though the remaining frames are usable."
+Wu1gxxpbF2o__E_004498_004505,Wu1gxxpbF2o,5,9.141,yolo26l_960/sheets_v3/Wu1gxxpbF2o__E_004498_004505.png,,p,p,y,Approach starts with 2 NOT FOUND frames. Flight has a NOT FOUND frame near the vault. Landing is fully trackable across the shown frames.
+X4CY5MZwI9I__E_003619_003628,X4CY5MZwI9I,5.4,7.6,yolo26l_960/sheets_v3/X4CY5MZwI9I__E_003619_003628.png,,p,p,p,"Approach has 1 NOT FOUND frame. Flight has 1 NOT FOUND frame, with the remaining frames usable. Landing starts with 2 NOT FOUND frames, while the later frames are trackable."
+X4ajWw8L19s__E_005841_005849,X4ajWw8L19s,4,8.65,yolo26l_960/sheets_v3/X4ajWw8L19s__E_005841_005849.png,,y,p,p,"Approach is fully trackable. Flight has 2 NOT FOUND frames, so partial. Landing has 1 NOT FOUND frame, with the remaining frames trackable."
+XZak6ktC90c__E_001828_001835,XZak6ktC90c,5.8,8.966,yolo26l_960/sheets_v3/XZak6ktC90c__E_001828_001835.png,,p,p,p,"Approach has 1 NOT FOUND frame at the end. Flight has 2 NOT FOUND frames near the vault phase. Landing starts with 3 NOT FOUND frames, with the later frames trackable."
+Xw1UvouxVLk__E_004243_004249,Xw1UvouxVLk,6.3,9.5,yolo26l_960/sheets_v3/Xw1UvouxVLk__E_004243_004249.png,,p,p,p,"Approach starts with 1 NOT FOUND frame. Flight has 2 NOT FOUND frames around the vault phase. Landing has multiple NOT FOUND frames, though the remaining frames are trackable."
+Z0bBRwAzKe0__E_001826_001833,Z0bBRwAzKe0,5.9,9.3,yolo26l_960/sheets_v3/Z0bBRwAzKe0__E_001826_001833.png,,p,y,p,"Approach starts and ends with NOT FOUND frames, though the middle frames are trackable. Flight is fully trackable. Landing has 1 NOT FOUND frame at the beginning, with the remaining frames trackable."
+aEZbP-Yephw__E_000258_000266,aEZbP-Yephw,6.5,9.066,yolo26l_960/sheets_v3/aEZbP-Yephw__E_000258_000266.png,,y,y,y,skeleton generally stays on gymnast across all stages
+aN9hSsP6xTg__E_002354_002361,aN9hSsP6xTg,6.2,8.866,yolo26l_960/sheets_v3/aN9hSsP6xTg__E_002354_002361.png,,y,p,p,flight has 2 NOT FOUND frames; landing has 2 NOT FOUND frames
+dqUNtY2GwW4__E_004835_004843,dqUNtY2GwW4,6.3,9.5,yolo26l_960/sheets_v3/dqUNtY2GwW4__E_004835_004843.png,,y,n,p,flight 3 NOT FOUND; landing 2 NOT FOUND
+e3EsDlpNo0c__E_002242_002258,e3EsDlpNo0c,6.4,8.75,yolo26l_960/sheets_v3/e3EsDlpNo0c__E_002242_002258.png,,y,p,p,flight 1 NOT FOUND; landing 1 NOT FOUND
+f-1FbFegbuQ__E_001763_001771,f-1FbFegbuQ,6.5,9.45,yolo26l_960/sheets_v3/f-1FbFegbuQ__E_001763_001771.png,,p,y,y,Approach partially visible; flight and landing sufficiently visible
+fDa0HpoXES4__E_005048_005055,fDa0HpoXES4,6,9.6,yolo26l_960/sheets_v3/fDa0HpoXES4__E_005048_005055.png,,y,y,p,Landing partially visible; first two landing frames are NOT FOUND
+gYyLkUbGuUU__E_002579_002587,gYyLkUbGuUU,5.6,8.866,yolo26l_960/sheets_v3/gYyLkUbGuUU__E_002579_002587.png,,p,p,p,Multiple NOT FOUND frames across all three phases
+hibW8s4WQmQ__E_003654_003661,hibW8s4WQmQ,6.4,9.55,yolo26l_960/sheets_v3/hibW8s4WQmQ__E_003654_003661.png,,p,p,p,Multiple NOT FOUND frames across all three phases
+hp2PJMAJqyA__E_003409_003417,hp2PJMAJqyA,6.4,9.2,yolo26l_960/sheets_v3/hp2PJMAJqyA__E_003409_003417.png,,y,p,p,Approach fully visible; flight and landing have NOT FOUND frames
+jABvTCCWinA__E_004062_004072,jABvTCCWinA,5.5,8.05,yolo26l_960/sheets_v3/jABvTCCWinA__E_004062_004072.png,,y,p,y,Approach clear; flight has missing/unclear frames; landing mostly clear
+jz594oTnl-k__E_000757_000765,jz594oTnl-k,5,8.9,yolo26l_960/sheets_v3/jz594oTnl-k__E_000757_000765.png,,n,y,y,Approach mostly close-up/NOT FOUND; flight and landing have good pose tracking
+mQ59PLtU4QA__E_001269_001277,mQ59PLtU4QA,5,8.8,yolo26l_960/sheets_v3/mQ59PLtU4QA__E_001269_001277.png,,p,p,p,Approach and landing include partial/missing pose detections.
+n9-yxVGYMRw__E_000991_000999,n9-yxVGYMRw,5.8,9.3,yolo26l_960/sheets_v3/n9-yxVGYMRw__E_000991_000999.png,,y,p,p,Flight/landing include missing detections.
+nEoD3t5O3Hg__E_004105_004114,nEoD3t5O3Hg,5.8,9,yolo26l_960/sheets_v3/nEoD3t5O3Hg__E_004105_004114.png,,p,p,n,Landing has multiple missing detections.
+oShVYr-GRqw__E_002195_002201,oShVYr-GRqw,5.4,8.933,yolo26l_960/sheets_v3/oShVYr-GRqw__E_002195_002201.png,,y,p,p,Approach is consistently detected; flight has 2 NOT FOUND frames; landing has 3 NOT FOUND frames.
+pEoWudMTZbY__E_000081_000087,pEoWudMTZbY,6.2,9.3,yolo26l_960/sheets_v3/pEoWudMTZbY__E_000081_000087.png,,y,y,y,All three phases have usable pose detections throughout; no major NOT FOUND frames.
+qfgrzomg0nc__E_002071_002077,qfgrzomg0nc,,8.85,yolo26l_960/sheets_v3/qfgrzomg0nc__E_002071_002077.png,,y,p,p,Approach is consistently tracked. Flight has several NOT FOUND frames and only partial usable tracking. Landing has some clear tracked frames but also NOT FOUND frames.
+qzi2cKZCf94__E_004076_004083,qzi2cKZCf94,5.8,8.575,yolo26l_960/sheets_v3/qzi2cKZCf94__E_004076_004083.png,,y,y,p,Approach tracking is clear throughout. Flight is mostly well tracked with one NOT FOUND frame. Landing has multiple usable frames but begins with NOT FOUND frames.
+u6tU91r1Szo__E_003506_003515,u6tU91r1Szo,3.5,8.366,yolo26l_960/sheets_v3/u6tU91r1Szo__E_003506_003515.png,,p,y,p,Approach contains a close-up/NOT FOUND frame but the remaining approach is tracked. Flight is consistently tracked. Landing has two NOT FOUND frames followed by usable tracking.
+wWZry3-5sF0__E_003832_003839,wWZry3-5sF0,6.3,9.55,yolo26l_960/sheets_v3/wWZry3-5sF0__E_003832_003839.png,,p,p,p,Approach has NOT FOUND frames at the beginning and end. Flight has 2 NOT FOUND frames around the vault phase. Landing starts with 2 NOT FOUND frames but the later frames are trackable.
+yNlBac0ZMJg__E_000925_000934,yNlBac0ZMJg,6.4,8.133,yolo26l_960/sheets_v3/yNlBac0ZMJg__E_000925_000934.png,,p,p,p,"Approach has 2 NOT FOUND frames at the end. Flight has 2 NOT FOUND frames, so partial. Landing starts with 2 NOT FOUND frames but the remaining frames are trackable."
+yj0pNXcTK0k__E_002796_002804,yj0pNXcTK0k,5.4,8.833,yolo26l_960/sheets_v3/yj0pNXcTK0k__E_002796_002804.png,,y,y,y,"Approach, flight, and landing are fully trackable across the shown frames. No NOT FOUND frames are present."
+yvZPHJu3kb0__E_001700_001708,yvZPHJu3kb0,5.8,9.1,yolo26l_960/sheets_v3/yvZPHJu3kb0__E_001700_001708.png,,y,y,y,"All approach, flight, and landing frames are consistently trackable."
+yz-uNJgIhk4__E_002070_002077,yz-uNJgIhk4,5.8,9.25,yolo26l_960/sheets_v3/yz-uNJgIhk4__E_002070_002077.png,,p,y,p,"Approach is fully trackable. Flight has 2 NOT FOUND frames near the end, so partial. Landing has 1 NOT FOUND frame, with the remaining frames trackable."

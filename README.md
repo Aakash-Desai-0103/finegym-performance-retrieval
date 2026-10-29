@@ -1,73 +1,95 @@
 # Action Performance-Aware Fine-Grained Composite Video Retrieval
 
-This project focuses on the analysis and retrieval of gymnastics vault performances using deep spatio-temporal features. The primary objective is to develop a system that can distinguish between athletes performing the same vault by analyzing execution quality (E-score) across specific phases: the approach, the flight, and the landing.
+Measuring **how well** a gymnast performed, not just what they performed, on FineGym vault videos, and explaining the score in judging terms. This is the performance-measurement foundation for performance-aware retrieval and comparison.
 
-## 🎯 Objective
+**Target:** the judges' execution score **E** from FineGym-AQA, compared among gymnasts performing the **same vault** (Total and difficulty mostly encode which vault was done).
+**Evaluation:** Spearman rank correlation (SRCC) overall, within the same vault, and within the same vault **and** competition (removes the competition-level shortcut), with 95% bootstrap intervals over test competitions. Train/test split by competition: 784 / 177 clips.
 
-We aim to determine if fine-grained, stage-specific representations can better predict athletic performance and execution quality than global, whole-clip features. Our research specifically targets the "competition-level shortcut," where models might mistakenly correlate broadcast quality or event prestige with athlete execution.
+## Results so far (vault, test set)
 
-## 🛠️ Methodology
+| Method | Overall | Within vault | Within vault + competition | Explains the score? |
+|---|---|---|---|---|
+| Frozen VideoMAE, 3 stage features + ridge (Week 1) | 0.57 | **0.49** | **0.39** | No |
+| Pose symbols + fixed deductions (no training) | 0.11 | 0.25 | 0.23 | Yes: deduction list |
+| Pose symbols + fitted deductions | 0.18 | 0.31 | 0.25 | Yes: deduction list |
+| Ridge on 10 pose symbols | 0.16 | 0.24 | 0.27 | Partly |
+| LSTM over 6 key frames | 0.41 | 0.22 | 0.13 | When (attention) |
+| LSTM + symbols | 0.46 | 0.24 | 0.12 | When and which |
 
-The project follows a rigorous pipeline from raw data acquisition to advanced model probing:
+Pose models use the 170 test clips with stage annotations; VideoMAE uses 177. Intervals are about ±0.15.
 
-### 1. Data Acquisition & Curation
-Using **FineGym-AQA**, we integrated official result-book scores (Difficulty, Execution, and Total) into the dataset.
-- **Manifest Building**: Curated 1,247 scored vault clips, split by source video to prevent data leakage.
-- **Pipeline**: Implemented a robust download and trim system using `yt-dlp` and `FFmpeg`, successfully processing 961 usable clips (784 train / 177 test).
-- **Validation**: Performed manual spot-checks against official FIG result PDFs to ensure annotation consistency.
+**Explainability check (blind, 20 test clips, one non-expert reviewer):** the system caught 5/5 deep-squat and 5/5 trunk-forward landings the reviewer saw and flagged no false falls; its fault count follows the judges' E (Spearman −0.69) about as well as the reviewer's (−0.74). In-air and arm-swing flags are not yet reliable.
 
-### 2. Feature Extraction & Modeling
-We utilize a frozen **VideoMAE-Base** (Kinetics-400) to extract temporal features:
-- **Global vs. Stage**: We compare whole-clip embeddings against separate embeddings for the approach, flight, and landing stages.
-- **Regression Models**: Employed Ridge Regression and Neural Networks to predict execution scores.
-- **Evaluation**: Used Spearman's Rank Correlation Coefficient (SRCC) and permutation tests to validate results.
+## Key findings
 
-### 3. VLM Zero-Shot Baseline
-To test the capabilities of general-purpose AI, we evaluated **Qwen2.5-VL-3B-Instruct** in a zero-shot setting. We prompted the model to act as an FIG judge and provide both a score and a qualitative explanation for the performance.
+1. **Total is mostly "which vault"**: difficulty alone predicts Total at 0.90, so E within the same vault is the real performance target.
+2. **Generic video features encode the broadcast**: 76% of nearest neighbours come from the same competition video.
+3. **Competition shortcut**: models can rank by recognising elite competitions; evaluating within the same vault and competition removes it.
+4. **The landing carries the execution signal**: shown independently by VideoMAE stage features, the fitted deduction weights and the LSTM's attention (~63% on landing frames).
+5. **FineGym's third vault segment is table push-off + second flight + landing**, not just the landing.
+6. **A zero-shot VLM (Qwen2.5-VL-3B) cannot judge execution**: constant score, position bias, ungrounded explanations.
+7. **TF-CoVR's AIM backbone was trained on 12 of our 16 test competitions**; FineGym evaluations built on it need an overlap check.
 
-## 📈 Key Findings
-
-### Performance-Aware Retrieval
-- **Stage-Wise Superiority**: Stage-specific features significantly outperform whole-clip features for execution prediction.
-- **The Competition Shortcut**: We discovered that models often learn the absolute E-level of a competition (e.g., elite meets score higher). When controlling for the competition, stage-wise features still maintain a Spearman correlation of **≈0.4** within the same vault.
-- **Feature Bottleneck**: Increasing model complexity (e.g., switching from Ridge to Neural Networks) did not significantly improve results, indicating that the quality of frozen features is the primary limiting factor.
-
-### VLM Evaluation
-- **Failure of Zero-Shot Judging**: The small VLM failed to discriminate execution, providing a constant score (8.2) for all clips and exhibiting strong position bias in pairwise comparisons.
-- **Ungrounded Explanations**: VLM-generated justifications were "hallucinated" boilerplate text and not grounded in actual video evidence.
-
-## 📂 Project Structure
+## Pipeline
 
 ```text
-├── analysis/          # Probing scripts, model comparisons, and VLM evaluations
-├── notebooks/         # Feature extraction and VLM zero-shot experiments
-├── scripts/           # Data pipeline: manifest building, clip downloading, and verification
-├── out/               # Generated manifests, availability reports, and results
-└── notes.md           # Detailed development log and experimental results
+FineGym-AQA scores ──> vault manifest ──> clip download ──> 961 clips (split by competition)
+                                                     │
+          ┌──────────────────────────────────────────┴───────────────────────────────┐
+  Week 1: frozen VideoMAE (whole + 3 stages) ──> ridge / MLP / pairwise ──> E          │
+  Week 2: pose (YOLO26-L, gymnast picked per stage, rotated pass for upside-down frames)
+          ──> 6 key frames ──> 10 judge-style symbols ──> rules (deduction list) / LSTM ──> E + explanation
+                                                     │
+  Checks: within-vault / within-competition SRCC, leakage checks, key-frame review, blind fault check
 ```
 
-## 🚀 Getting Started
+## Repository structure
 
-### Prerequisites
-- Python 3.x
-- FFmpeg (required for clip extraction)
-- `numpy`, `pandas`, `scipy`, `scikit-learn`, `yt-dlp`
+```text
+├── scripts/      data pipeline: manifest, clip download, clip checks
+├── notebooks/    Colab notebooks: VideoMAE features, VLM zero-shot, AIM features, pose pilot + full run
+├── analysis/     Week 1 analysis: feature probes, score models, competition shortcut, VLM, TF-CoVR overlap
+├── pose/         Week 2: pose utilities, pose quality, key frames, symbols + rules, LSTM, fault check
+├── results/      Week 2 result files and reports (Week 1 results are in analysis/)
+└── out/          vault manifest and clip availability
+```
 
-### Running the Pipeline
-1. **Download Clips**: Use `scripts/download_clips.py` to fetch videos from YouTube.
-2. **Verify Clips**: Run `scripts/check_clips.py` to ensure data integrity.
-3. **Extract Features**: Follow `notebooks/day3_feature_extraction.ipynb` to generate VideoMAE embeddings.
-4. **Analyze**: Use the scripts in `analysis/` to correlate features with performance scores.
+Large data (clips, features, raw pose detections) lives on Google Drive and in the git-ignored `data/`, `clips/` and `features/` folders.
+
+## Running it
+
+```bash
+pip install -r requirements.txt
+# 1) data
+python scripts/build_vault_manifest.py ...        # see the script header
+python scripts/download_clips.py out/vault_manifest.csv clips
+python scripts/check_clips.py out/vault_manifest.csv clips out
+# 2) pose (Colab GPU): notebooks/week2_pose_pilot.ipynb with MODE='full', MODELS=['yolo26l-pose.pt']
+#    download pose/yolo26l_960/gymnast_v3/ into data/pose/yolo26l_960/gymnast_v3/
+# 3) key frames, symbols, scoring (laptop CPU)
+python pose/keyframes.py --gym-dir data/pose/yolo26l_960/gymnast_v3 --index features/videomae_k400_index.csv --clips clips --out data/keyframes
+python pose/symbols.py --kf data/keyframes --out data/symbols
+python pose/lstm_score.py --kf data/keyframes --symbols data/symbols/symbols.csv --out data/lstm
+# 4) explanation check
+python pose/fault_check.py make     # fill in data/fault_check/fault_check.csv by watching the clips
+python pose/fault_check.py score
+```
+
+## Limitations and next steps
+
+- Touchdown detection is still early in some clips; in-air pose is noisy, so second-flight symbols are weak.
+- One reviewer for the fault check; vault only.
+- Next: learned touchdown detector, better in-air pose, a hybrid (learned score + symbolic explanation), a second apparatus, then performance-aware retrieval and comparison.
 
 ---
 
 **Capstone Project**
 
-**Project Title:** Action Performance-Aware Fine-Grained Composite Video Retrieval  
-**Project ID:** PW_25_GT_02  
-**Project Guide:** Dr. Gayathri T  
-**Project Team:**  
-- Aakash Desai (PES1UG24CS006)  
-- Aariz Qureshi (PES1UG24CS008)  
-- Amogh Sharma (PES1UG24CS053)  
+**Project Title:** Action Performance-Aware Fine-Grained Composite Video Retrieval
+**Project ID:** PW_25_GT_02
+**Project Guide:** Dr. Gayathri T
+**Project Team:**
+- Aakash Desai (PES1UG24CS006)
+- Aariz Qureshi (PES1UG24CS008)
+- Amogh Sharma (PES1UG24CS053)
 - Anagha B Poojari (PES1UG24CS056)

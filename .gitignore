@@ -4,4 +4,12 @@ clips/
 features/
 __pycache__/
 *.mp4
+analysis/probe_results.csvtfcovr_annotations/
+*.npz
+*.pt
+*.ckpt
 analysis/probe_results.csv
+tfcovr_annotations/
+*.npz
+*.pt
+*.ckpt

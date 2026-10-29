@@ -1,0 +1,171 @@
+clip_id,vault_code,E_true,E_pred,explanation,not_measured
+1rkcLEAMTpw__E_000176_000183,5.80,9.066,9.025,"landing: arm swings on landing (ld_arm_range=1.45, typical 1.04) -0.01",
+1rkcLEAMTpw__E_000279_000286,5.40,8.933,9.016,"second flight: legs apart (sf_leg_sep_max=0.44, typical 0.24) -0.02",
+1rkcLEAMTpw__E_000374_000381,5.80,8.866,9.032,no faults beyond tolerance,
+1rkcLEAMTpw__E_000459_000466,5.30,9.0,8.961,"landing: deep squat on landing (ld_knee_min=121.34, typical 138.55) -0.06; second flight: legs apart (sf_leg_sep_max=0.33, typical 0.18) -0.01",
+1rkcLEAMTpw__E_000540_000547,5.80,9.133,8.878,"second flight: body line broken (hips piked) (sf_hip_min=50.93, typical 140.53) -0.15",
+1rkcLEAMTpw__E_000611_000618,4.60,8.9,9.032,no faults beyond tolerance,
+1rkcLEAMTpw__E_000694_000700,6.20,9.3,8.999,"landing: arm swings on landing (ld_arm_range=1.73, typical 0.69) -0.03",
+1rkcLEAMTpw__E_000761_000769,5.80,8.766,8.923,"landing: steps on landing (ld_feet_range=0.82, typical 0.32) -0.09; landing: deep squat on landing (ld_knee_min=124.44, typical 137.59) -0.01; landing: arm swings on landing (ld_arm_range=1.39, typical 1.04) -0.01",
+1rkcLEAMTpw__E_000847_000854,5.80,9.133,9.032,no faults beyond tolerance,sf_leg_sep_max
+1rkcLEAMTpw__E_000930_000936,5.60,8.666,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+1rkcLEAMTpw__E_001027_001034,5.80,9.066,8.979,"landing: steps on landing (ld_feet_range=0.68, typical 0.32) -0.05",
+1rkcLEAMTpw__E_001104_001112,5.60,8.933,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+1rkcLEAMTpw__E_001202_001210,5.40,9.0,9.003,"second flight: legs apart (sf_leg_sep_max=0.54, typical 0.24) -0.03",
+1rkcLEAMTpw__E_001279_001288,5.20,7.8,8.437,"landing: trunk folded forward on landing (ld_hip_min=100.52, typical 150.55) -0.24; second flight: body line broken (hips piked) (sf_hip_min=57.36, typical 137.38) -0.13; landing: deep squat on landing (ld_knee_min=106.56, typical 144.44) -0.10; landing: steps on landing (ld_feet_range=0.94, typical 0.39) -0.07",
+1rkcLEAMTpw__E_001381_001388,5.80,9.266,8.791,"landing: trunk folded forward on landing (ld_hip_min=75.90, typical 126.41) -0.24","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+1rkcLEAMTpw__E_001459_001466,5.60,9.2,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+26Y8BsNiiL8__E_000043_000052,6.50,9.5,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+26Y8BsNiiL8__E_000472_000480,5.80,9.35,9.019,"second flight: legs apart (sf_leg_sep_max=0.35, typical 0.20) -0.01",
+26Y8BsNiiL8__E_003680_003689,6.30,9.5,9.011,"landing: trunk folded forward on landing (ld_hip_min=114.14, typical 128.11) -0.02",
+26Y8BsNiiL8__E_003742_003751,5.80,9.4,8.987,"landing: trunk folded forward on landing (ld_hip_min=107.18, typical 126.41) -0.04; second flight: legs apart (sf_leg_sep_max=0.31, typical 0.20) -0.01",
+26Y8BsNiiL8__E_003841_003849,6.50,8.9,8.273,"landing: trunk folded forward on landing (ld_hip_min=88.17, typical 134.00) -0.53; second flight: body line broken (hips piked) (sf_hip_min=70.51, typical 153.51) -0.19; landing: steps on landing (ld_feet_range=0.81, typical 0.42) -0.05",
+26Y8BsNiiL8__E_003943_003950,6.50,9.65,8.807,"landing: trunk folded forward on landing (ld_hip_min=121.75, typical 134.00) -0.11; landing: deep squat on landing (ld_knee_min=100.84, typical 117.37) -0.06; second flight: legs apart (sf_leg_sep_max=0.51, typical 0.16) -0.05",
+26Y8BsNiiL8__E_004202_004210,6.50,9.3,8.645,"landing: trunk folded forward on landing (ld_hip_min=118.20, typical 134.00) -0.17; landing: deep squat on landing (ld_knee_min=86.16, typical 117.37) -0.17; second flight: legs apart (sf_leg_sep_max=0.37, typical 0.16) -0.05",
+26Y8BsNiiL8__E_004389_004397,6.50,9.5,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+8tdGvTDHmzc__E_004611_004618,5.00,8.966,8.441,"landing: deep squat on landing (ld_knee_min=78.88, typical 145.09) -0.33; landing: trunk folded forward on landing (ld_hip_min=88.04, typical 135.58) -0.22; second flight: body line broken (hips piked) (sf_hip_min=88.61, typical 135.26) -0.04","sf_leg_sep_max, ld_feet_range"
+8tdGvTDHmzc__E_004713_004720,5.80,8.633,8.464,"landing: deep squat on landing (ld_knee_min=80.26, typical 137.59) -0.27; landing: trunk folded forward on landing (ld_hip_min=81.30, typical 126.41) -0.21; second flight: body line broken (hips piked) (sf_hip_min=80.88, typical 140.53) -0.09","sf_leg_sep_max, ld_feet_range"
+8tdGvTDHmzc__E_004844_004850,5.80,9.133,9.029,no faults beyond tolerance,
+8tdGvTDHmzc__E_004961_004968,5.80,9.333,9.032,no faults beyond tolerance,
+8tdGvTDHmzc__E_005056_005063,5.00,8.766,9.032,no faults beyond tolerance,ld_feet_range
+9Mtbac7g15I__E_000229_000237,5.50,9.4,8.65,"landing: steps on landing (ld_feet_range=1.06, typical 0.21) -0.23; landing: deep squat on landing (ld_knee_min=103.18, typical 134.31) -0.15; landing: arm swings on landing (ld_arm_range=1.16, typical 0.88) -0.01",
+9Mtbac7g15I__E_000746_000754,6.50,9.5,8.526,"landing: steps on landing (ld_feet_range=1.71, typical 0.42) -0.24; second flight: body line broken (hips piked) (sf_hip_min=63.12, typical 153.51) -0.19; second flight: legs apart (sf_leg_sep_max=0.70, typical 0.16) -0.05; landing: deep squat on landing (ld_knee_min=105.58, typical 117.37) -0.02",
+9Mtbac7g15I__E_001647_001655,5.80,8.75,8.915,"second flight: body line broken (hips piked) (sf_hip_min=76.98, typical 140.53) -0.10; second flight: legs apart (sf_leg_sep_max=0.38, typical 0.20) -0.02",
+9Mtbac7g15I__E_003016_003024,5.80,9.15,8.989,"landing: trunk folded forward on landing (ld_hip_min=106.28, typical 126.41) -0.04",
+9Mtbac7g15I__E_003135_003143,6.30,9.2,8.616,"landing: steps on landing (ld_feet_range=1.73, typical 0.50) -0.22; landing: trunk folded forward on landing (ld_hip_min=96.17, typical 128.11) -0.16; second flight: body line broken (hips piked) (sf_hip_min=127.15, typical 154.39) -0.03",
+9Mtbac7g15I__E_003229_003236,5.00,9.6,9.016,"landing: arm swings on landing (ld_arm_range=1.62, typical 1.00) -0.02",
+9Mtbac7g15I__E_004486_004493,5.50,9.25,8.946,"second flight: body line broken (hips piked) (sf_hip_min=69.26, typical 140.37) -0.08",
+BLzs5opw8uM__E_001797_001805,5.80,9.3,9.005,"landing: steps on landing (ld_feet_range=0.58, typical 0.32) -0.03","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+BLzs5opw8uM__E_003144_003151,5.80,9.2,8.967,"landing: trunk folded forward on landing (ld_hip_min=104.42, typical 126.41) -0.06; landing: arm swings on landing (ld_arm_range=1.39, typical 1.04) -0.01",
+BLzs5opw8uM__E_004209_004217,5.80,9.25,9.002,"second flight: body line broken (hips piked) (sf_hip_min=115.68, typical 140.53) -0.02; landing: arm swings on landing (ld_arm_range=1.53, typical 1.04) -0.01",
+BLzs5opw8uM__E_004622_004629,5.80,9.2,8.745,"second flight: body line broken (hips piked) (sf_hip_min=27.23, typical 140.53) -0.19; landing: trunk folded forward on landing (ld_hip_min=97.79, typical 126.41) -0.10",
+BLzs5opw8uM__E_004728_004735,6.30,9.35,8.931,"second flight: body line broken (hips piked) (sf_hip_min=120.38, typical 154.39) -0.04; landing: trunk folded forward on landing (ld_hip_min=112.13, typical 128.11) -0.04; landing: deep squat on landing (ld_knee_min=111.44, typical 125.14) -0.02",
+BLzs5opw8uM__E_004824_004831,5.80,9.25,9.026,"landing: arm swings on landing (ld_arm_range=1.41, typical 1.04) -0.01","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+BLzs5opw8uM__E_005347_005352,6.30,9.35,8.623,"landing: deep squat on landing (ld_knee_min=25.86, typical 125.14) -0.38; second flight: body line broken (hips piked) (sf_hip_min=132.32, typical 154.39) -0.02; second flight: legs apart (sf_leg_sep_max=0.28, typical 0.22) -0.01",
+BLzs5opw8uM__E_005354_005359,5.80,9.25,8.885,"landing: deep squat on landing (ld_knee_min=105.43, typical 137.59) -0.12; landing: arm swings on landing (ld_arm_range=1.95, typical 1.04) -0.02",
+esQQbBhuXbM__E_000714_000722,5.80,9.5,8.963,"landing: steps on landing (ld_feet_range=0.74, typical 0.32) -0.07",
+esQQbBhuXbM__E_000947_000953,6.20,9.4,9.026,"landing: arm swings on landing (ld_arm_range=1.06, typical 0.69) -0.01",
+esQQbBhuXbM__E_001152_001160,5.80,9.066,8.815,"landing: deep squat on landing (ld_knee_min=105.15, typical 137.59) -0.13; second flight: body line broken (hips piked) (sf_hip_min=89.80, typical 140.53) -0.07; second flight: legs apart (sf_leg_sep_max=0.39, typical 0.20) -0.02",
+esQQbBhuXbM__E_001694_001699,5.80,9.233,8.992,"second flight: body line broken (hips piked) (sf_hip_min=106.03, typical 140.53) -0.04",
+esQQbBhuXbM__E_002565_002572,5.00,9.133,9.009,"landing: deep squat on landing (ld_knee_min=130.42, typical 145.09) -0.02",
+esQQbBhuXbM__E_003066_003074,5.00,9.233,8.585,"landing: steps on landing (ld_feet_range=1.16, typical 0.24) -0.25; landing: deep squat on landing (ld_knee_min=117.77, typical 145.09) -0.10; landing: trunk folded forward on landing (ld_hip_min=109.86, typical 135.58) -0.08; second flight: legs apart (sf_leg_sep_max=0.44, typical 0.20) -0.02",
+esQQbBhuXbM__E_003401_003408,5.80,9.333,9.025,"second flight: body line broken (hips piked) (sf_hip_min=121.98, typical 140.53) -0.01",
+esQQbBhuXbM__E_005036_005042,5.80,9.266,8.842,"second flight: body line broken (hips piked) (sf_hip_min=40.04, typical 140.53) -0.18; second flight: legs apart (sf_leg_sep_max=0.36, typical 0.20) -0.01",
+esQQbBhuXbM__E_005107_005113,5.30,8.766,8.382,"landing: deep squat on landing (ld_knee_min=46.15, typical 138.55) -0.38; landing: trunk folded forward on landing (ld_hip_min=123.57, typical 149.36) -0.20; second flight: body line broken (hips piked) (sf_hip_min=94.91, typical 145.97) -0.07",
+esQQbBhuXbM__E_005445_005453,6.00,8.875,8.771,"landing: trunk folded forward on landing (ld_hip_min=81.44, typical 122.74) -0.24; landing: deep squat on landing (ld_knee_min=127.55, typical 135.29) -0.02",
+esQQbBhuXbM__E_006470_006476,5.40,9.233,9.032,no faults beyond tolerance,
+esQQbBhuXbM__E_006750_006758,5.00,8.866,8.681,"landing: steps on landing (ld_feet_range=1.18, typical 0.24) -0.25; landing: deep squat on landing (ld_knee_min=116.76, typical 145.09) -0.10",
+esQQbBhuXbM__E_006838_006845,5.80,9.366,8.979,"landing: deep squat on landing (ld_knee_min=117.48, typical 137.59) -0.05",
+GbUQwE9N3aM__E_002601_002607,5.80,9.5,9.03,no faults beyond tolerance,
+GbUQwE9N3aM__E_002926_002932,6.30,9.7,9.032,no faults beyond tolerance,
+GbUQwE9N3aM__E_002965_002971,6.30,9.7,9.031,no faults beyond tolerance,
+GbUQwE9N3aM__E_002997_003004,6.00,9.4,8.632,"landing: deep squat on landing (ld_knee_min=106.70, typical 135.29) -0.24; landing: steps on landing (ld_feet_range=1.25, typical 0.45) -0.13; second flight: legs apart (sf_leg_sep_max=0.72, typical 0.32) -0.03",
+GbUQwE9N3aM__E_004023_004030,6.30,9.5,8.624,"landing: steps on landing (ld_feet_range=2.07, typical 0.50) -0.25; landing: deep squat on landing (ld_knee_min=91.55, typical 125.14) -0.14; landing: trunk folded forward on landing (ld_hip_min=114.27, typical 128.11) -0.02","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+GbUQwE9N3aM__E_004084_004090,5.60,9.4,8.801,"landing: trunk folded forward on landing (ld_hip_min=103.71, typical 127.20) -0.11; landing: steps on landing (ld_feet_range=1.11, typical 0.42) -0.08; landing: deep squat on landing (ld_knee_min=130.07, typical 141.94) -0.03; landing: arm swings on landing (ld_arm_range=1.55, typical 1.00) -0.01",
+GbUQwE9N3aM__E_004628_004636,6.40,8.5,8.906,"landing: steps on landing (ld_feet_range=0.28, typical 0.14) -0.13","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+GbUQwE9N3aM__E_004709_004716,5.80,8.8,9.026,"landing: arm swings on landing (ld_arm_range=1.42, typical 1.04) -0.01",
+GbUQwE9N3aM__E_004833_004840,6.30,9.2,9.024,"second flight: legs apart (sf_leg_sep_max=0.28, typical 0.22) -0.01",
+GbUQwE9N3aM__E_004875_004886,6.30,9.2,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max, ld_knee_min, ld_hip_min, ld_feet_range, ld_step_events, ld_balance_range, ld_arm_range"
+GbUQwE9N3aM__E_005423_005429,5.80,9.25,9.012,"landing: deep squat on landing (ld_knee_min=123.64, typical 137.59) -0.02",
+GbUQwE9N3aM__E_005748_005756,5.00,8.95,8.996,"landing: deep squat on landing (ld_knee_min=128.68, typical 145.09) -0.03","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+GbUQwE9N3aM__E_006068_006075,5.80,9.35,8.907,"landing: steps on landing (ld_feet_range=0.95, typical 0.32) -0.12",
+gYyLkUbGuUU__E_000589_000595,4.60,8.733,9.026,no faults beyond tolerance,
+gYyLkUbGuUU__E_000795_000803,5.80,8.766,8.915,"second flight: body line broken (hips piked) (sf_hip_min=82.21, typical 140.53) -0.09; second flight: legs apart (sf_leg_sep_max=0.46, typical 0.20) -0.03",
+gYyLkUbGuUU__E_000878_000886,5.20,8.5,8.952,"second flight: body line broken (hips piked) (sf_hip_min=96.90, typical 137.38) -0.05; landing: arm swings on landing (ld_arm_range=1.42, typical 0.79) -0.02; second flight: legs apart (sf_leg_sep_max=0.36, typical 0.22) -0.01",
+gYyLkUbGuUU__E_001187_001204,5.20,8.5,8.67,"landing: trunk folded forward on landing (ld_hip_min=82.08, typical 150.55) -0.36","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+gYyLkUbGuUU__E_001220_001228,5.80,7.566,7.968,"landing: deep squat on landing (ld_knee_min=27.83, typical 137.59) -0.38; landing: trunk folded forward on landing (ld_hip_min=56.87, typical 126.41) -0.36; second flight: body line broken (hips piked) (sf_hip_min=53.28, typical 140.53) -0.15; landing: steps on landing (ld_feet_range=0.96, typical 0.32) -0.13",
+gYyLkUbGuUU__E_001311_001320,5.30,7.766,7.864,"landing: trunk folded forward on landing (ld_hip_min=57.49, typical 149.36) -0.53; landing: deep squat on landing (ld_knee_min=50.29, typical 138.55) -0.38; landing: steps on landing (ld_feet_range=2.00, typical 0.39) -0.25; second flight: legs apart (sf_leg_sep_max=0.34, typical 0.18) -0.01",
+gYyLkUbGuUU__E_001516_001524,6.30,9.033,8.951,"second flight: body line broken (hips piked) (sf_hip_min=104.53, typical 154.39) -0.08",
+gYyLkUbGuUU__E_001618_001626,5.60,9.0,8.909,"second flight: body line broken (hips piked) (sf_hip_min=63.62, typical 145.15) -0.11; landing: arm swings on landing (ld_arm_range=1.65, typical 1.00) -0.01",
+gYyLkUbGuUU__E_001845_001852,6.40,8.7,8.893,"landing: trunk folded forward on landing (ld_hip_min=107.06, typical 129.29) -0.14",
+gYyLkUbGuUU__E_001937_001944,6.30,9.1,9.032,no faults beyond tolerance,
+gYyLkUbGuUU__E_002166_002173,6.20,9.133,9.019,"landing: arm swings on landing (ld_arm_range=1.27, typical 0.69) -0.01",
+gYyLkUbGuUU__E_002257_002265,5.80,9.166,9.032,no faults beyond tolerance,
+gYyLkUbGuUU__E_002489_002496,5.80,8.9,8.97,"landing: steps on landing (ld_feet_range=0.67, typical 0.32) -0.05; second flight: legs apart (sf_leg_sep_max=0.34, typical 0.20) -0.01",
+gYyLkUbGuUU__E_002579_002587,5.60,8.866,8.967,"landing: steps on landing (ld_feet_range=1.04, typical 0.42) -0.06",
+gYyLkUbGuUU__E_002793_002801,5.80,9.033,9.032,no faults beyond tolerance,
+gYyLkUbGuUU__E_002874_002883,5.20,9.0,8.519,"landing: trunk folded forward on landing (ld_hip_min=101.16, typical 150.55) -0.24; landing: steps on landing (ld_feet_range=1.34, typical 0.39) -0.15; second flight: body line broken (hips piked) (sf_hip_min=62.11, typical 137.38) -0.12; landing: arm swings on landing (ld_arm_range=1.32, typical 0.79) -0.01",
+ICL5k84viw0__E_002409_002417,5.40,8.95,8.999,"second flight: legs apart (sf_leg_sep_max=0.53, typical 0.24) -0.03; landing: arm swings on landing (ld_arm_range=1.34, typical 0.94) -0.01",
+ICL5k84viw0__E_002491_002499,4.40,8.7,8.89,"landing: steps on landing (ld_feet_range=1.10, typical 0.41) -0.13; landing: arm swings on landing (ld_arm_range=1.25, typical 0.83) -0.01",
+ICL5k84viw0__E_002578_002586,5.20,9.3,9.014,"landing: arm swings on landing (ld_arm_range=1.26, typical 0.79) -0.01; second flight: legs apart (sf_leg_sep_max=0.32, typical 0.22) -0.01",
+ICL5k84viw0__E_002657_002665,5.40,9.3,9.032,no faults beyond tolerance,
+ICL5k84viw0__E_002752_002760,4.60,8.8,9.032,no faults beyond tolerance,
+ICL5k84viw0__E_002836_002844,4.20,8.7,8.792,"landing: steps on landing (ld_feet_range=0.51, typical 0.20) -0.18; landing: deep squat on landing (ld_knee_min=127.16, typical 151.82) -0.06",
+ICL5k84viw0__E_002929_002938,4.60,8.9,8.974,"landing: steps on landing (ld_feet_range=0.60, typical 0.28) -0.06",
+ICL5k84viw0__E_003006_003014,4.60,8.8,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+ICL5k84viw0__E_003113_003120,5.40,8.7,9.03,no faults beyond tolerance,
+ICL5k84viw0__E_003200_003207,5.20,9.0,8.97,"landing: steps on landing (ld_feet_range=0.89, typical 0.39) -0.06",
+ICL5k84viw0__E_003301_003307,4.60,8.85,9.026,"landing: arm swings on landing (ld_arm_range=1.45, typical 1.04) -0.01",
+ICL5k84viw0__E_003384_003392,4.60,8.75,8.963,"second flight: body line broken (hips piked) (sf_hip_min=112.39, typical 140.24) -0.04; landing: steps on landing (ld_feet_range=0.50, typical 0.28) -0.02; second flight: legs apart (sf_leg_sep_max=0.31, typical 0.22) -0.01",
+ICL5k84viw0__E_003483_003490,4.60,8.5,8.991,"second flight: legs apart (sf_leg_sep_max=0.40, typical 0.22) -0.02; landing: steps on landing (ld_feet_range=0.48, typical 0.28) -0.02",
+ICL5k84viw0__E_003576_003584,4.60,8.8,9.032,no faults beyond tolerance,
+ICL5k84viw0__E_003677_003684,5.40,8.85,9.032,no faults beyond tolerance,
+ICL5k84viw0__E_003762_003769,5.00,8.9,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+mQ59PLtU4QA__E_000669_000678,5.40,8.866,8.802,"landing: steps on landing (ld_feet_range=1.24, typical 0.30) -0.22; second flight: legs apart (sf_leg_sep_max=0.37, typical 0.24) -0.01",
+mQ59PLtU4QA__E_000761_000770,4.60,8.766,8.458,"landing: deep squat on landing (ld_knee_min=84.92, typical 139.88) -0.33; landing: trunk folded forward on landing (ld_hip_min=97.13, typical 137.56) -0.21; landing: steps on landing (ld_feet_range=0.52, typical 0.28) -0.03",sf_hip_min
+mQ59PLtU4QA__E_000855_000862,5.40,8.866,8.78,"landing: steps on landing (ld_feet_range=1.61, typical 0.30) -0.25","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+mQ59PLtU4QA__E_000952_000960,4.80,8.833,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max, ld_knee_min, ld_hip_min, ld_feet_range, ld_step_events, ld_balance_range, ld_arm_range"
+mQ59PLtU4QA__E_001269_001277,5.00,8.8,8.625,"landing: deep squat on landing (ld_knee_min=86.76, typical 145.09) -0.28; landing: trunk folded forward on landing (ld_hip_min=102.43, typical 135.58) -0.13","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+mQ59PLtU4QA__E_001358_001366,5.40,9.033,9.014,"landing: trunk folded forward on landing (ld_hip_min=100.22, typical 118.09) -0.02","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+mQ59PLtU4QA__E_001455_001463,5.40,9.066,8.891,"landing: steps on landing (ld_feet_range=0.83, typical 0.30) -0.11; second flight: body line broken (hips piked) (sf_hip_min=90.12, typical 131.46) -0.03",
+mQ59PLtU4QA__E_001544_001551,4.60,8.733,8.806,"landing: steps on landing (ld_feet_range=0.89, typical 0.28) -0.14; landing: deep squat on landing (ld_knee_min=121.44, typical 139.88) -0.07; landing: arm swings on landing (ld_arm_range=1.56, typical 1.04) -0.01; landing: trunk folded forward on landing (ld_hip_min=124.99, typical 137.56) -0.01","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+UcCTusldh6w__E_000863_000871,6.30,9.2,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+UcCTusldh6w__E_001966_001974,6.30,9.5,8.968,"second flight: legs apart (sf_leg_sep_max=1.55, typical 0.22) -0.05; landing: steps on landing (ld_feet_range=0.75, typical 0.50) -0.01",
+UcCTusldh6w__E_004340_004347,5.80,9.1,8.719,"landing: steps on landing (ld_feet_range=1.72, typical 0.32) -0.25; landing: deep squat on landing (ld_knee_min=115.35, typical 137.59) -0.07",
+UcCTusldh6w__E_004492_004499,6.30,9.7,8.994,"second flight: body line broken (hips piked) (sf_hip_min=127.60, typical 154.39) -0.03; landing: deep squat on landing (ld_knee_min=113.14, typical 125.14) -0.01",
+UcCTusldh6w__E_004567_004574,5.60,9.55,8.948,"landing: deep squat on landing (ld_knee_min=126.91, typical 141.94) -0.06; landing: steps on landing (ld_feet_range=0.80, typical 0.42) -0.02","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+UcCTusldh6w__E_004724_004731,6.50,8.6,8.506,"landing: trunk folded forward on landing (ld_hip_min=84.90, typical 134.00) -0.53",
+UcCTusldh6w__E_004819_004826,5.80,9.0,8.732,"landing: steps on landing (ld_feet_range=1.69, typical 0.32) -0.25; second flight: legs apart (sf_leg_sep_max=0.85, typical 0.20) -0.05",
+UcCTusldh6w__E_005481_005489,5.80,9.4,8.945,"landing: steps on landing (ld_feet_range=0.75, typical 0.32) -0.07; second flight: legs apart (sf_leg_sep_max=0.38, typical 0.20) -0.02",
+vY-jPM995Gk__E_000468_000475,5.80,9.15,8.877,"landing: steps on landing (ld_feet_range=1.07, typical 0.32) -0.15",
+vY-jPM995Gk__E_000894_000900,5.80,9.15,9.015,"landing: arm swings on landing (ld_arm_range=1.75, typical 1.04) -0.02",
+vY-jPM995Gk__E_003209_003215,5.80,9.5,8.906,"landing: deep squat on landing (ld_knee_min=105.00, typical 137.59) -0.13",
+vY-jPM995Gk__E_004037_004044,6.30,9.4,8.873,"landing: steps on landing (ld_feet_range=1.44, typical 0.50) -0.16",
+vY-jPM995Gk__E_004125_004133,6.00,9.4,8.784,"landing: steps on landing (ld_feet_range=1.91, typical 0.45) -0.25","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+vY-jPM995Gk__E_004803_004810,6.30,9.5,9.02,"second flight: body line broken (hips piked) (sf_hip_min=135.11, typical 154.39) -0.01",
+vY-jPM995Gk__E_004862_004869,5.60,9.4,8.937,"landing: deep squat on landing (ld_knee_min=122.75, typical 141.94) -0.09","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+yj0pNXcTK0k__E_001579_001587,5.80,8.8,8.794,"landing: steps on landing (ld_feet_range=0.98, typical 0.32) -0.13; second flight: body line broken (hips piked) (sf_hip_min=74.98, typical 140.53) -0.10",
+yj0pNXcTK0k__E_001658_001665,4.80,8.941,8.989,"second flight: body line broken (hips piked) (sf_hip_min=117.57, typical 147.86) -0.04",
+yj0pNXcTK0k__E_001907_001915,5.80,8.983,9.029,no faults beyond tolerance,
+yj0pNXcTK0k__E_001977_001985,4.80,8.9,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+yj0pNXcTK0k__E_002206_002214,5.40,9.133,9.032,no faults beyond tolerance,
+yj0pNXcTK0k__E_002235_002247,5.40,9.133,9.01,"second flight: body line broken (hips piked) (sf_hip_min=98.11, typical 131.46) -0.02",
+yj0pNXcTK0k__E_002287_002295,4.40,9.033,8.832,"landing: steps on landing (ld_feet_range=1.35, typical 0.41) -0.20","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+yj0pNXcTK0k__E_002554_002563,5.40,9.466,9.002,"second flight: legs apart (sf_leg_sep_max=0.55, typical 0.24) -0.03",
+yj0pNXcTK0k__E_002608_002616,5.20,9.491,9.024,"second flight: legs apart (sf_leg_sep_max=0.32, typical 0.22) -0.01",
+yj0pNXcTK0k__E_002796_002804,5.40,8.833,8.778,"landing: steps on landing (ld_feet_range=1.65, typical 0.30) -0.25",
+yj0pNXcTK0k__E_002846_002854,5.60,8.8,8.785,"landing: trunk folded forward on landing (ld_hip_min=86.96, typical 127.20) -0.25",
+yj0pNXcTK0k__E_002866_002877,5.60,8.8,8.881,"landing: trunk folded forward on landing (ld_hip_min=98.56, typical 127.20) -0.15",
+yj0pNXcTK0k__E_003113_003129,5.40,9.233,9.019,"second flight: legs apart (sf_leg_sep_max=0.42, typical 0.24) -0.01",
+yj0pNXcTK0k__E_003164_003172,5.20,9.2,9.032,no faults beyond tolerance,
+yj0pNXcTK0k__E_003432_003441,5.40,7.666,8.708,"landing: trunk folded forward on landing (ld_hip_min=78.16, typical 118.09) -0.15; landing: deep squat on landing (ld_knee_min=80.59, typical 125.58) -0.14; second flight: legs apart (sf_leg_sep_max=0.51, typical 0.24) -0.02; landing: steps on landing (ld_feet_range=0.50, typical 0.30) -0.01",
+yj0pNXcTK0k__E_003489_003497,5.00,8.866,8.754,"landing: steps on landing (ld_feet_range=0.66, typical 0.24) -0.15; landing: deep squat on landing (ld_knee_min=111.76, typical 145.09) -0.13","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+yj0pNXcTK0k__E_003701_003708,5.80,8.658,8.718,"landing: trunk folded forward on landing (ld_hip_min=83.93, typical 126.41) -0.19; landing: steps on landing (ld_feet_range=0.85, typical 0.32) -0.10; landing: deep squat on landing (ld_knee_min=121.81, typical 137.59) -0.03","sf_knee_min, sf_hip_min, sf_leg_sep_max"
+yj0pNXcTK0k__E_003729_003743,5.80,8.658,8.425,"landing: trunk folded forward on landing (ld_hip_min=68.22, typical 126.41) -0.29; landing: steps on landing (ld_feet_range=0.88, typical 0.32) -0.11; landing: deep squat on landing (ld_knee_min=109.87, typical 137.59) -0.10; second flight: body line broken (hips piked) (sf_hip_min=86.46, typical 140.53) -0.08",
+yj0pNXcTK0k__E_003788_003796,5.20,9.0,8.989,"landing: trunk folded forward on landing (ld_hip_min=132.14, typical 150.55) -0.03; landing: arm swings on landing (ld_arm_range=1.22, typical 0.79) -0.01",
+yj0pNXcTK0k__E_003811_003827,5.20,9.0,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+yNlBac0ZMJg__E_000714_000722,5.40,9.166,9.032,no faults beyond tolerance,
+yNlBac0ZMJg__E_000812_000819,5.40,9.2,8.969,"second flight: body line broken (hips piked) (sf_hip_min=72.22, typical 131.46) -0.06",
+yNlBac0ZMJg__E_000925_000934,6.40,8.133,7.876,"landing: trunk folded forward on landing (ld_hip_min=27.83, typical 129.29) -0.53; landing: deep squat on landing (ld_knee_min=24.51, typical 145.66) -0.38; landing: steps on landing (ld_feet_range=0.55, typical 0.14) -0.25",
+yNlBac0ZMJg__E_001060_001068,5.40,9.0,9.022,"second flight: legs apart (sf_leg_sep_max=0.39, typical 0.24) -0.01",
+yNlBac0ZMJg__E_001152_001161,5.40,8.766,8.982,"landing: deep squat on landing (ld_knee_min=103.85, typical 125.58) -0.03; landing: trunk folded forward on landing (ld_hip_min=101.44, typical 118.09) -0.01; landing: arm swings on landing (ld_arm_range=1.35, typical 0.94) -0.01",
+yNlBac0ZMJg__E_001250_001258,4.60,8.966,9.032,no faults beyond tolerance,
+yNlBac0ZMJg__E_002498_002506,4.60,8.7,8.681,"landing: steps on landing (ld_feet_range=1.10, typical 0.28) -0.21; second flight: body line broken (hips piked) (sf_hip_min=69.84, typical 140.24) -0.14",
+yNlBac0ZMJg__E_002694_002701,4.60,8.8,8.988,"second flight: body line broken (hips piked) (sf_hip_min=109.94, typical 140.24) -0.04",
+yNlBac0ZMJg__E_002903_002910,4.60,9.0,8.979,"second flight: body line broken (hips piked) (sf_hip_min=114.30, typical 140.24) -0.03; landing: steps on landing (ld_feet_range=0.48, typical 0.28) -0.02",
+yNlBac0ZMJg__E_004349_004359,5.80,8.833,8.878,"landing: trunk folded forward on landing (ld_hip_min=89.21, typical 126.41) -0.15",
+yNlBac0ZMJg__E_004593_004600,4.60,8.866,9.032,no faults beyond tolerance,
+yNlBac0ZMJg__E_004903_004910,5.40,8.9,9.032,no faults beyond tolerance,"sf_knee_min, sf_hip_min, sf_leg_sep_max"
+yNlBac0ZMJg__E_005138_005145,5.40,9.1,9.006,"second flight: body line broken (hips piked) (sf_hip_min=95.61, typical 131.46) -0.03",
+yNlBac0ZMJg__E_005856_005862,4.60,8.833,9.032,no faults beyond tolerance,
+yNlBac0ZMJg__E_006149_006157,4.60,9.033,9.029,no faults beyond tolerance,
+yNlBac0ZMJg__E_006645_006653,4.60,8.866,8.937,"landing: steps on landing (ld_feet_range=0.73, typical 0.28) -0.10",
+yNlBac0ZMJg__E_006902_006909,5.40,9.166,9.008,"second flight: body line broken (hips piked) (sf_hip_min=96.77, typical 131.46) -0.02",
+ZHpME-SbKdQ__E_000348_000354,5.60,8.9,8.858,"landing: trunk folded forward on landing (ld_hip_min=97.55, typical 127.20) -0.16; second flight: body line broken (hips piked) (sf_hip_min=119.10, typical 145.15) -0.01",
+ZHpME-SbKdQ__E_000539_000546,6.40,8.133,8.949,"landing: trunk folded forward on landing (ld_hip_min=112.57, typical 129.29) -0.08",
+ZHpME-SbKdQ__E_000623_000630,4.80,8.633,9.032,no faults beyond tolerance,
+ZHpME-SbKdQ__E_000772_000779,4.60,8.6,8.739,"landing: steps on landing (ld_feet_range=1.06, typical 0.28) -0.20; landing: deep squat on landing (ld_knee_min=121.60, typical 139.88) -0.07; landing: trunk folded forward on landing (ld_hip_min=121.63, typical 137.56) -0.03",
+ZHpME-SbKdQ__E_000870_000877,4.60,8.9,9.032,no faults beyond tolerance,
+ZHpME-SbKdQ__E_004736_004743,4.00,8.7,9.029,no faults beyond tolerance,
+ZHpME-SbKdQ__E_004813_004820,5.40,8.6,8.895,"landing: steps on landing (ld_feet_range=0.93, typical 0.30) -0.14",
+ZHpME-SbKdQ__E_004969_004975,5.40,8.967,9.025,"landing: arm swings on landing (ld_arm_range=1.37, typical 0.94) -0.01",

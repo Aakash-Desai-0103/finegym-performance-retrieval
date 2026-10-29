@@ -1,0 +1,34 @@
+FAULT CHECK: 20 clips, blind review vs system flags (fault beyond 0.5 SD of the same vault)
+
+fault            clips people saw system flagged  agree  caught false alarms
+steps               20        55%            65%    60%     73%          56%
+deep_squat          20        25%            50%    75%    100%          33%
+trunk_forward       20        25%            40%    85%    100%          20%
+arm_swing           20         0%            35%    65%    nan%          35%
+fall_or_hands       20        25%            15%    90%     60%           0%
+bent_knees_air      18         0%            33%    67%    nan%          33%
+legs_apart_air      18         0%            44%    56%    nan%          44%
+
+overall agreement: 97/136 = 71%
+caught = of the faults people saw, how many the system flagged (recall)
+false alarms = of the clips people saw NO such fault, how many the system flagged
+
+people's fault count vs judges' E: Spearman -0.74 (expected negative: more faults, lower E)
+system's fault count vs judges' E: Spearman -0.69
+
+disagreements (look at these clips to see who is right):
+  1rkcLEAMTpw__E_001279_001288: arm_swing -> people no, system yes
+  1rkcLEAMTpw__E_001279_001288: fall_or_hands -> people yes, system no
+  1rkcLEAMTpw__E_001279_001288: bent_knees_air -> people no, system yes
+  1rkcLEAMTpw__E_001279_001288: legs_apart_air -> people no, system yes
+  gYyLkUbGuUU__E_002874_002883: trunk_forward -> people no, system yes
+  gYyLkUbGuUU__E_002874_002883: arm_swing -> people no, system yes
+  gYyLkUbGuUU__E_002874_002883: bent_knees_air -> people no, system yes
+  UcCTusldh6w__E_004567_004574: steps -> people no, system yes
+  UcCTusldh6w__E_004567_004574: deep_squat -> people no, system yes
+  GbUQwE9N3aM__E_002965_002971: legs_apart_air -> people no, system yes
+  gYyLkUbGuUU__E_001311_001320: steps -> people no, system yes
+  gYyLkUbGuUU__E_001311_001320: legs_apart_air -> people no, system yes
+  UcCTusldh6w__E_004819_004826: legs_apart_air -> people no, system yes
+  yNlBac0ZMJg__E_000925_000934: arm_swing -> people no, system yes
+  yNlBac0ZMJg__E_000925_000934: bent_knees_air -> people no, system yes

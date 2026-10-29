@@ -1,0 +1,27 @@
+clips: 886 (train 716, test 170) | sequence 30 steps x 34 features | train x2 with mirror augmentation
+
+1. EXECUTION SCORE ON TEST (95% CI by test videos)
+   reference, frozen VideoMAE (Days 3-4, full test set): within vault 0.476-0.489, within vault+competition 0.393
+
+       model              SRCC       within_vault within_vault_video  pred_std
+  ridge_flat 0.327 [0.16,0.48]  0.236 [0.08,0.36] 0.127 [-0.05,0.29]     0.283
+        lstm 0.409 [0.23,0.57] 0.218 [-0.00,0.36] 0.125 [-0.21,0.31]     0.298
+lstm+symbols 0.456 [0.28,0.60]  0.237 [0.01,0.39] 0.118 [-0.21,0.33]     0.293
+   pred_std near 0 = the model predicts almost the same E for everyone (collapsed)
+
+2. WHERE THE LSTM LOOKS (mean attention per key-frame window, test clips; uniform = 0.17)
+run_end          0.107
+table            0.091
+flight_peak      0.171
+touchdown        0.195
+deepest_squat    0.206
+settled          0.229
+
+   low-E clips (bottom quarter) vs the rest:
+               low E  others
+run_end        0.080   0.116
+table          0.080   0.095
+flight_peak    0.201   0.161
+touchdown      0.221   0.186
+deepest_squat  0.204   0.207
+settled        0.214   0.235

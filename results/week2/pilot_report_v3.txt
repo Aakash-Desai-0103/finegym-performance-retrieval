@@ -1,0 +1,42 @@
+A. AUTOMATIC QUALITY PER MODEL (pilot clips)
+   coverage = frames with the gymnast; usable = coverage>=0.8 and limb_cv<=0.25 and lower_visible>=0.6
+
+--- yolo11l_960 (60 clips, gymnast height/frame 0.59)
+                         approach  flight  landing
+coverage (median)           0.931   0.736    0.798
+share from rotated pass     0.000   0.122    0.121
+lower-body conf (mean)      0.739   0.761    0.836
+lower visible (mean)        0.766   0.832    0.901
+jitter (median)             0.030   0.070    0.028
+limb_cv (median)            0.173   0.237    0.209
+USABLE clips                0.483   0.200    0.400 
+
+--- yolo26l_960 (60 clips, gymnast height/frame 0.59)   <- reviewed
+                         approach  flight  landing
+coverage (median)           0.929   0.757    0.791
+share from rotated pass     0.000   0.087    0.093
+lower-body conf (mean)      0.727   0.765    0.832
+lower visible (mean)        0.753   0.831    0.890
+jitter (median)             0.029   0.065    0.022
+limb_cv (median)            0.192   0.223    0.185
+USABLE clips                0.467   0.183    0.333 
+
+B. VISUAL REVIEW: checklist not filled in yet; skipping B, C and the verdict.
+
+D. FIRST SYMBOLS vs JUDGES' E (yolo26l_960, 60 clips; no training, direction only)
+   expected sign: straighter knees / smaller leg separation / less landing movement -> higher E
+
+               symbol  n  median  SRCC_E  within_vault  n_vault_clips        sign
+      flight_knee_min 59 107.325   0.019         0.123             36 as expected
+     flight_knee_mean 59 155.373  -0.124        -0.105             36    OPPOSITE
+      flight_hip_mean 59 142.704  -0.229        -0.335             36            
+   flight_leg_sep_max 59   0.860  -0.037         0.088             36 as expected
+     landing_knee_min 60 121.132   0.087         0.169             37 as expected
+      landing_hip_min 60 100.672   0.192         0.096             37 as expected
+   landing_feet_range 60   0.505  -0.309        -0.243             37 as expected
+landing_balance_range 60   0.598  -0.007        -0.042             37 as expected
+   With ~60 clips, |SRCC| < 0.25 is indistinguishable from noise. Look for the sign and for the landing symbols,
+   which carried the most signal in the video features.
+
+E. VERDICT
+   fill in the checklist and re-run for a verdict

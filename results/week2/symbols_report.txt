@@ -1,0 +1,54 @@
+clips: 886 (train 716, test 170) | touchdown found by pose: 98%
+
+1. SYMBOLS (train): coverage, and Spearman with E within the same vault
+   expected sign: a fault direction of -1 means smaller values should go with LOWER E
+
+          symbol         phase                             fault  coverage  median  within_vault_SRCC expected agrees
+     sf_knee_min second flight                        knees bent     0.774 151.254              0.105        +    yes
+      sf_hip_min second flight     body line broken (hips piked)     0.774 138.624              0.213        +    yes
+  sf_leg_sep_max second flight                        legs apart     0.757   0.222             -0.143        -    yes
+   sf_duration_s second flight         low / short second flight     1.000   0.880             -0.101        +     no
+     ld_knee_min       landing             deep squat on landing     0.975 138.205              0.137        +    yes
+      ld_hip_min       landing   trunk folded forward on landing     0.975 131.411              0.270        +    yes
+   ld_feet_range       landing                  steps on landing     0.969   0.309             -0.391        -    yes
+  ld_step_events       landing several foot movements on landing     0.975   1.000             -0.356        -    yes
+ld_balance_range       landing   balance (hips moving over feet)     0.975   0.280             -0.037        -    yes
+    ld_arm_range       landing             arm swings on landing     0.975   0.973              0.100        -     no 
+
+2. EXECUTION SCORE ON TEST (95% CI by test videos)
+   reference, frozen VideoMAE (Days 3-4, full test set): within vault 0.476-0.489, within vault+competition 0.393
+
+        model               SRCC      within_vault within_vault_video
+  rules_fixed 0.113 [-0.06,0.30] 0.253 [0.08,0.34]  0.231 [0.13,0.46]
+ rules_fitted 0.184 [-0.01,0.38] 0.306 [0.09,0.41]  0.247 [0.04,0.35]
+ridge_symbols  0.158 [0.03,0.31] 0.240 [0.09,0.36]  0.270 [0.07,0.42]
+   test vault codes with >=5 clips: 8
+
+3. DEDUCTION WEIGHTS (per SD beyond tolerance)
+          symbol                             fault  fixed  fitted  clips with this fault (test)
+     sf_knee_min                        knees bent    0.1   0.000                          0.24
+      sf_hip_min     body line broken (hips piked)    0.1   0.063                          0.25
+  sf_leg_sep_max                        legs apart    0.1   0.017                          0.24
+   sf_duration_s         low / short second flight    0.1   0.000                          0.19
+     ld_knee_min             deep squat on landing    0.1   0.128                          0.26
+      ld_hip_min   trunk folded forward on landing    0.1   0.175                          0.24
+   ld_feet_range                  steps on landing    0.3   0.083                          0.31
+  ld_step_events several foot movements on landing    0.1   0.000                          0.29
+ld_balance_range   balance (hips moving over feet)    0.1   0.000                          0.24
+    ld_arm_range             arm swings on landing    0.1   0.012                          0.28
+   fitted baseline (E with no faults): 9.03 | fixed baseline: 9.90
+   fitted weight 0 = the train data gave no evidence this symbol lowers E
+
+4. EXAMPLE EXPLANATIONS (rules_fitted, test clips: 3 lowest and 3 highest true E)
+   gYyLkUbGuUU__E_001220_001228 vault 5.80 | true E 7.566 | predicted 7.968
+      landing: deep squat on landing (ld_knee_min=27.83, typical 137.59) -0.38; landing: trunk folded forward on landing (ld_hip_min=56.87, typical 126.41) -0.36; second flight: body line broken (hips piked) (sf_hip_min=53.28, typical 140.53) -0.15; landing: steps on landing (ld_feet_range=0.96, typical 0.32) -0.13
+   yj0pNXcTK0k__E_003432_003441 vault 5.40 | true E 7.666 | predicted 8.708
+      landing: trunk folded forward on landing (ld_hip_min=78.16, typical 118.09) -0.15; landing: deep squat on landing (ld_knee_min=80.59, typical 125.58) -0.14; second flight: legs apart (sf_leg_sep_max=0.51, typical 0.24) -0.02; landing: steps on landing (ld_feet_range=0.50, typical 0.30) -0.01
+   gYyLkUbGuUU__E_001311_001320 vault 5.30 | true E 7.766 | predicted 7.864
+      landing: trunk folded forward on landing (ld_hip_min=57.49, typical 149.36) -0.53; landing: deep squat on landing (ld_knee_min=50.29, typical 138.55) -0.38; landing: steps on landing (ld_feet_range=2.00, typical 0.39) -0.25; second flight: legs apart (sf_leg_sep_max=0.34, typical 0.18) -0.01
+   GbUQwE9N3aM__E_002926_002932 vault 6.30 | true E 9.7 | predicted 9.032
+      no faults beyond tolerance
+   GbUQwE9N3aM__E_002965_002971 vault 6.30 | true E 9.7 | predicted 9.031
+      no faults beyond tolerance
+   UcCTusldh6w__E_004492_004499 vault 6.30 | true E 9.7 | predicted 8.994
+      second flight: body line broken (hips piked) (sf_hip_min=127.60, typical 154.39) -0.03; landing: deep squat on landing (ld_knee_min=113.14, typical 125.14) -0.01

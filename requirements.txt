@@ -1,0 +1,10 @@
+# laptop (data pipeline, analysis, key frames, symbols, LSTM)
+numpy
+pandas
+scipy
+scikit-learn
+yt-dlp
+opencv-python
+torch
+# Colab only (installed inside the notebooks): transformers (VideoMAE, Qwen2.5-VL), ultralytics (YOLO pose), einops
+# system: FFmpeg (clip download and trimming)
